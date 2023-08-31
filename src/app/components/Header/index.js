@@ -31,7 +31,7 @@ const Header = () => {
           > 
           <p className="relative group">
             <span>Portfolio</span>
-            <span className="absolute -bottom-1 left-0 w-0 h-2 bg-blue-500 transition-all duration-500 group-hover:w-full"></span>
+            <span className="absolute -bottom-1 left-0 w-0 h-1 bg-blue-500 transition-all duration-500 group-hover:w-full"></span>
           </p>
            </Link>
         </li>

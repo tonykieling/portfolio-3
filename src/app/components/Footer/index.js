@@ -16,49 +16,47 @@ const Footer = () => {
 
       <div className="w-6/12 max-[1200px]:w-8/12 max-[1000px]:w-9/12 mb-4 border border-black"></div>
 
-      <nav className="list-none flex justify-center">
+      <p className="font-semibold text-lg mb-4">Let&apos;s connect!</p>
+
+      <nav className="list-none flex justify-center mb-4">
         <li className="px-5">
-          <Link
-            href="#contact"
-          >
+          <a href="mailto:tony.kieling@gmail.com">
             <Image
               src={gmailIcon}
               width={28}
               height={28}
               alt="Contact"
-              title="Contact"
+              title="tony.kieling@gmail.com"
             />
-          </Link>
+          </a>
         </li>
+        
         <li className="px-5">
-          <Link legacyBehavior href="https://www.linkedin.com/in/tony-kieling/">
-            <a target="_blank" rel="noopener noreferrer">
-              <Image
-                src={linkedinIcon}
-                width={28}
-                height={28}
-                alt="LinkedIn"
-                title="LinkedIn"
-              />
-            </a>
-          </Link>
+          <a target="_blank" href="https://www.linkedin.com/in/tony-kieling/" rel="noopener noreferrer">
+            <Image
+              src={linkedinIcon}
+              width={28}
+              height={28}
+              alt="LinkedIn"
+              title="LinkedIn"
+            />
+          </a>
         </li>
+
         <li className="px-5">
-          <Link legacyBehavior href="https://github.com/tonykieling">
-            <a target="_blank" rel="noopener noreferrer">
-              <Image
-                src={githubIcon}
-                width={28}
-                height={28}
-                alt="GitHub"
-                title="GitHub"
-              />
-            </a>
-          </Link>
+          <a target="_blank" href="https://github.com/tonykieling" rel="noopener noreferrer">
+            <Image
+              src={githubIcon}
+              width={28}
+              height={28}
+              alt="GitHub"
+              title="GitHub"
+            />
+          </a>
         </li>
       </nav>
 
-      <div className="justify-center pt-3">Tony Kieling&copy; - {getYear()}  </div>
+      <div className="justify-center pt-3 font-semibold">Tony Kieling &copy; - {getYear()}  </div>
 
     </section>
   )
