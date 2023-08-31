@@ -9,13 +9,15 @@ const Header = () => {
       
       <div className="absolute top-0 left-4 max-[350px]:left-3 h-full">
         <div className="h-full flex flex-col justify-center">
-          <Image 
-            src={logo}
-            width={35}
-            height={35}
-            alt="TK's logo"
-            className="max-[320px]:w-7 max-[350px]:w-8"
-          />
+          <Link href={"#about"} >
+            <Image 
+              src={logo}
+              width={35}
+              height={35}
+              alt="TK's logo"
+              className="max-[320px]:w-7 max-[350px]:w-8"
+            />
+          </Link>
         </div>
       </div>
 

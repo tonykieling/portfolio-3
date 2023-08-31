@@ -7,9 +7,9 @@ module.exports = {
   ],
   theme: {
     extend: {
-      fontFamily: {
-        'oregano': ['oregano', 'sans-serif']
-      },
+      // fontFamily: {
+      //   'oregano': ['oregano', 'sans-serif']
+      // },
       // backgroundImage: {
       //   'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
       //   'gradient-conic':

@@ -1,9 +1,13 @@
 import Image from "next/image";
-import Link from "next/link";
 import gmailIcon from "../../images/gmail.svg";
 import linkedinIcon from "../../images/linkedin.svg";
 import githubIcon from "../../images/github.svg";
+// import { Oregano } from "next/font/google";
 
+// const oregano = Oregano({
+//   subsets: ["latin"],
+//   weight: "400"
+// });
 
 const Footer = () => {
   const getYear = () => {
@@ -56,7 +60,15 @@ const Footer = () => {
         </li>
       </nav>
 
-      <div className="justify-center pt-3 font-semibold">Tony Kieling &copy; - {getYear()}  </div>
+      <div>
+        <span 
+          className={`justify-center pt-3  text-lg tracking-wide `} 
+          style={{fontVariant: "small-caps"}}>Tony Kieling
+        </span>
+        <span>
+          &copy; - {getYear()}
+        </span>
+      </div> 
 
     </section>
   )
