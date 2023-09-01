@@ -63,11 +63,12 @@ const Footer = () => {
       <div>
         <span 
           className={`justify-center pt-3  text-lg tracking-wide `} 
-          style={{fontVariant: "small-caps"}}>Tony Kieling
+          style={{fontVariant: "small-caps"}}> &nbsp;Tony Kieling
         </span>
-        <span>
-          &copy; - {getYear()}
-        </span>
+          <span>
+            &copy; 2019 - {getYear()}.
+          </span>
+        <span> All rights reserved.</span>
       </div> 
 
     </section>

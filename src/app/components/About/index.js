@@ -6,7 +6,7 @@ import ArrowDownButton from "../../images/arrow-down.svg";
 const About = () => {
 
   return (
-    <section className="bg-green-400 h-[calc(100vh-69px)] flex flex-col" id="about">
+    <section className="bg-stone-300 h-[calc(100vh-69px)] flex flex-col" id="about">
 
       <div className="h-[calc((100vh-68px)*0.8)] max-[550px]:h-[calc((100vh-68px)*0.85)]">
         <div className="flex h-full max-[550px]:flex-col max-[550px]:items-center">

@@ -29,7 +29,6 @@ const Header = () => {
         </li>
         <li className="max-[320px]:px-2 max-[450px]:px-3 max-[600px]:px-4 px-6 inline-block text-stone-800 hover:cursor-pointer">
           <Link href="#portfolio" 
-            // className="hover:text-stone-200 hover:bg-stone-800 hover:rounded-md px-2 py-1"
           > 
           <p className="relative group">
             <span>Portfolio</span>

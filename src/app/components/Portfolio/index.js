@@ -1,14 +1,17 @@
+import WebDevPath from "./items/WebDevPath";
+import Clockin from "./items/Clockin";
+import HomeSeeker from "./items/HomeSeeker";
+
 const Portfolio = () => {
   return (
-    <section className="" id="portfolio">
-      <p className="text-left font-extrabold text-2xl">Portfolio</p>
+    <section className="flex flex-col items-center bg-stone-200" id="portfolio">
+      <h1 className="text-4xl font-semibold mt-7 mb-5">Portfolio</h1>
+      <p className="text-lg">Some of the projects I have been working on:</p>
       
-      <article className="flex flex-col items-center border border-green-400 p-4" id="about">
-        <p className="py-4">This is portfloio</p>
-        <p className="py-4">More PORTFOLIO</p>
-        <p className="py-4">Still PORTFOLIO</p>
-        <p className="py-4">PORTFOLIO&apos;s end</p>
-      </article>
+      <WebDevPath />
+      <Clockin />
+      <HomeSeeker />
+
     </section>
   )
 }

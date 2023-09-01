@@ -17,7 +17,7 @@
 }
 
 html {
-  scroll-padding-top: 68px;
+  scroll-padding-top: 67px;
 }
 
 body {
@@ -32,4 +32,6 @@ body {
     height: 100vh;
     height: 100dvh;
     height: 100svh;
+
+    color: #2a2b2c;
 }
