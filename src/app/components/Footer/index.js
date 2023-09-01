@@ -1,7 +1,4 @@
 import Image from "next/image";
-import gmailIcon from "../../images/gmail.svg";
-import linkedinIcon from "../../images/linkedin.svg";
-import githubIcon from "../../images/github.svg";
 // import { Oregano } from "next/font/google";
 
 // const oregano = Oregano({
@@ -26,7 +23,7 @@ const Footer = () => {
         <li className="px-5">
           <a href="mailto:tony.kieling@gmail.com">
             <Image
-              src={gmailIcon}
+              src={"/images/gmail.svg"}
               width={28}
               height={28}
               alt="Contact"
@@ -38,7 +35,7 @@ const Footer = () => {
         <li className="px-5">
           <a target="_blank" href="https://www.linkedin.com/in/tony-kieling/" rel="noopener noreferrer">
             <Image
-              src={linkedinIcon}
+              src={"/images/linkedin.svg"}
               width={28}
               height={28}
               alt="LinkedIn"
@@ -50,7 +47,7 @@ const Footer = () => {
         <li className="px-5">
           <a target="_blank" href="https://github.com/tonykieling" rel="noopener noreferrer">
             <Image
-              src={githubIcon}
+              src={"/images/github.svg"}
               width={28}
               height={28}
               alt="GitHub"

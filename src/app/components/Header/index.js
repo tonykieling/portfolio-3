@@ -1,5 +1,4 @@
 import Image from "next/image";
-import logo from "../../images/logo-tk.png";
 import Link from "next/link";
 
 const Header = () => {
@@ -11,7 +10,7 @@ const Header = () => {
         <div className="h-full flex flex-col justify-center">
           <Link href={"#about"} >
             <Image 
-              src={logo}
+              src={"/images/logo-tk.png"}
               width={35}
               height={35}
               alt="TK's logo"

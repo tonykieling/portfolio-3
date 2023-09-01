@@ -1,7 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import TK from "../../images/tk.jpg";
-import ArrowDownButton from "../../images/arrow-down.svg";
 
 const About = () => {
 
@@ -18,7 +16,7 @@ const About = () => {
           
           <div className="h-full w-2/5 flex items-center justify-start p-4 max-[550px]:order-1 max-[550px]:h-1/2 max-[550px]:w-1/2 max-[450px]:w-3/5" id="about">
             <Image 
-              src={TK}
+              src={"/images/tk.jpg"}
               width={300}
               height={300}
               alt="TK's picture"
@@ -34,7 +32,7 @@ const About = () => {
             href={"#portfolio"} 
           >
             <Image 
-              src={ArrowDownButton}
+              src={"/images/arrow-down.svg"}
               width={60}
               height={60}
               alt="arrow down"
