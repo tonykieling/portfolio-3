@@ -1,0 +1,65 @@
+[
+  {
+    "name": "Web Dev Path",
+    "website": "https://www.webdevpath.co",
+    "github": "https://github.com/Web-Dev-Path/web-dev-path",
+    "description": [
+      "It's is an open source project that aims to provide a comprehensive path for tech professionals to work in a team environment.",
+      "I have been colaborating with the team, commiting code, discuting solutions, and helping the project to achive their goals."
+    ],
+    "images": [
+      "web-dev-path.jpg"
+    ],
+    "techStack": "Next.js, React, Mailchimp, SendEmail, GoogleRecaptcha, and so on."
+  },
+  {
+    "name": "Clockin.js",
+    "website": "https://clockin.tkwebdev.ca",
+    "github": "https://github.com/tonykieling/clockinJS",
+    "description": [
+      "It allows you to have all your clients data, their clockins and invoices, in one place.",
+      "It presents an easy and straightforward workflow to control clockins and invoices.",
+      "Best of all, it's free! 🤑"
+    ],
+    "images": [
+      "clockin-1.jpg",
+      "clockin-2.jpg",
+      "clockin-3.jpg",
+      "clockin-4.jpg"
+    ],
+    "techStack": "React, MongoDB, Bootstrap, Redux, JSON Web Token."
+  },
+  {
+    "name": "Home Seeker",
+    "website": "https://home-seeker.tkwebdev.ca",
+    "github": "https://github.com/tonykieling/home-seeker",
+    "description": [
+      "An automated system to web scrape information from Craigslist about rentals availability.",
+      "It helped my wife and I to find our new home, quickly and easily receiving emails to shortcut our search.",
+      "Mission accomplished and happy new homers! 🏠😊"
+    ],
+    "images": [
+      "home-seeker-1.jpg",
+      "home-seeker-2.jpg",
+      "home-seeker-3.jpg",
+      "home-seeker-4.jpg"
+    ],
+    "techStack": "Node.js, React, Atlas MongoDB, Node-Mailer, CSS, and React-Modal."
+  },
+  {
+    "name": "CRUD",
+    "website": "https://crud.tkwebdev.ca",
+    "github": "https://github.com/tonykieling/crud-vercel-react-node",
+    "description": [
+      "A straight demonstration of a web system's basic principles for handling data:",
+      "Create, Retrieve, Update, and Delete"
+    ],
+    "images": [
+      "crud-1.jpg",
+      "crud-2.jpg",
+      "crud-3.jpg",
+      "crud-4.jpg"
+    ],
+    "techStack": "Node, React, MongoDB Atlas, CSS, HTML, and Mongoose."
+  }
+]

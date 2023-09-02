@@ -4,7 +4,7 @@ import Link from "next/link";
 const Header = () => {
 
   return (
-    <section className="sticky top-0 max-[320px]:pl-9 max-[350px]:pl-8 max-[450px]:pl-5 text-center py-5  bg-stone-200" id="header">
+    <section className="sticky z-10 top-0 max-[320px]:pl-9 max-[350px]:pl-8 max-[450px]:pl-5 text-center py-5  bg-stone-200" id="header">
       
       <div className="absolute top-0 left-4 max-[350px]:left-3 h-full">
         <div className="h-full flex flex-col justify-center">
