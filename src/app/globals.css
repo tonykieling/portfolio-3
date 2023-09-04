@@ -6,6 +6,7 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --header-height: 68px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -17,7 +18,8 @@
 }
 
 html {
-  scroll-padding-top: 67px;
+  /* scroll-padding-top: 68px; */
+  scroll-padding: var(--header-height);
 }
 
 body {

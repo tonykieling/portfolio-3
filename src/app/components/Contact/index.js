@@ -153,15 +153,13 @@ const Contact = () => {
 
 
   return (
-    // <section id="contact" className="bg-stone-800">
-    <section id="contact" className="flex flex-col items-center bg-stone-800">
-      <h1 className="text-4xl font-semibold mt-7 mb-5 text-yellow-100">Contact</h1>
-      {/* <article className="flex flex-col items-center mb-5 w-11/12 min-[500px]:w-2/3 min-[800px]:w-1/2 min-[1100px]:w-1/3 border"> */}
-      <article className="flex flex-col items-center mb-5 w-11/12 min-[500px]:w-2/3 min-[800px]:w-1/2  border">
-        <h2 className="text-lg my-3 font-semibold text-yellow-100">Feel free to reach out.</h2>
+    <section id="contact" className="flex flex-col items-center bg-[#424342]">
+      <h1 className="text-4xl font-semibold mt-7 mb-5 text-yellow-50">Contact</h1>
+      <article className="flex flex-col items-center mb-5 w-11/12 min-[500px]:w-2/3 min-[800px]:w-1/2 border rounded-lg">
+        <h2 className="text-lg my-3 font-semibold text-yellow-50">Feel free to reach out.</h2>
 
         <input 
-          className       = {`w-11/12 min-[500px]:w-2/3 min-[800px]:w-1/2 rounded-md pl-2 mb-2 h-9 ${inputRedBox.name && "outline outline-red-600 outline-[3px"}`}
+          className       = {`w-11/12 min-[500px]:w-2/3 min-[800px]:w-1/2 rounded-md pl-2 mb-2 h-9 bg-[#F3F3F1] ${inputRedBox.name && "outline outline-red-600 outline-[3px"}`}
           placeholder       = "Your name" 
           data-bs-toggle    = "tooltip" 
           data-bs-placement = "top"
@@ -177,7 +175,7 @@ const Contact = () => {
         />
 
         <input 
-          className       = {`w-11/12 min-[500px]:w-2/3 min-[800px]:w-1/2 rounded-md pl-2 mb-2 h-9 ${inputRedBox.email && "outline outline-red-600 outline-[3px]"}`}
+          className       = {`w-11/12 min-[500px]:w-2/3 min-[800px]:w-1/2 rounded-md pl-2 mb-2 h-9 bg-[#F3F3F1] ${inputRedBox.email && "outline outline-red-600 outline-[3px]"}`}
           placeholder     = "Your email"
           data-bs-toggle  = "tooltip" 
           title           = "I will never share your email with anyone else."
@@ -193,7 +191,7 @@ const Contact = () => {
         />
 
         <textarea
-          className       = {`w-11/12 min-[500px]:w-2/3 min-[800px]:w-1/2 rounded-md pl-2 pt-2 mb-2 ${inputRedBox.message && "outline outline-red-600 outline-[3px"}`}
+          className       = {`w-11/12 min-[500px]:w-2/3 min-[800px]:w-1/2 rounded-md pl-2 pt-2 mb-2 bg-[#F3F3F1] ${inputRedBox.message && "outline outline-red-600 outline-[3px"}`}
           rows            = "6"
           placeholder     = "Please, leave your message" 
           data-bs-toggle  = "tooltip" 
@@ -212,7 +210,7 @@ const Contact = () => {
         <button
           type      = "button"
           onClick   = { sendMessage }
-          className = {`bg-blue-700 hover:bg-blue-800 hover:text-yellow-100 hover:outline hover:outline-1 hover:outline-blue-950 text-white font-bold py-2 px-4 mb-4 mt-3 rounded ${(buttonMessage === "Message has been sent successfully!") && "bg-green-700 text-yellow-400 hover:bg-green-700 hover: hover:text-yellow-400"} ${(buttonMessage === "Refresh your screen, please") && "bg-yellow-500 text-red-800 cursor-not-allowed hover:bg-yellow-500 hover:text-red-800 hover:outline-yellow-600"}`}
+          className = {`bg-[blue] hover:bg-blue-800 hover:text-black text-yellow-100 hover:outline hover:outline-1 hover:outline-blue-950 font-bold py-2 px-4 mb-4 mt-3 rounded ${(buttonMessage === "Message has been sent successfully!") && "bg-green-700 text-yellow-400 hover:bg-green-700 hover: hover:text-yellow-400"} ${(buttonMessage === "Refresh your screen, please") && "bg-yellow-500 text-red-800 cursor-not-allowed hover:bg-yellow-500 hover:text-red-800 hover:outline-yellow-600"}`}
           ref       = { refButton }
           disabled  = { buttonMessage === "Sending..." ? true : false }
 

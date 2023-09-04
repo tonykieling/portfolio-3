@@ -4,20 +4,21 @@
     "website": "https://www.webdevpath.co",
     "github": "https://github.com/Web-Dev-Path/web-dev-path",
     "description": [
-      "It's is an open source project that aims to provide a comprehensive path for tech professionals to work in a team environment.",
-      "I have been colaborating with the team, commiting code, discuting solutions, and helping the project to achive their goals."
+      "It's is an open source project to provide a comprehensive path for tech professionals to work in a team environment."
     ],
     "images": [
       "web-dev-path.jpg"
     ],
-    "techStack": "Next.js, React, Mailchimp, SendEmail, GoogleRecaptcha, and so on."
+    "techStack": "Next.js, React, Mailchimp, SendEmail, GoogleRecaptcha."
   },
+
+
   {
     "name": "Clockin.js",
     "website": "https://clockin.tkwebdev.ca",
     "github": "https://github.com/tonykieling/clockinJS",
     "description": [
-      "It allows you to have all your clients data, their clockins and invoices, in one place.",
+      "Full-stack app that allows you to have all your clients data, their clockins and invoices, in one place.",
       "It presents an easy and straightforward workflow to control clockins and invoices.",
       "Best of all, it's free! 🤑"
     ],
@@ -29,14 +30,32 @@
     ],
     "techStack": "React, MongoDB, Bootstrap, Redux, JSON Web Token."
   },
+
+  
+  {
+    "name": "Movies App",
+    "website": "https://tonykielingbcit.github.io/react-project",
+    "github": "https://github.com/tonykielingbcit/react-project",
+    "description": [
+      "A BCIT team assignment front-end application which gets data from an API service and lists movies based on popularity, rating, and release date."
+
+    ],
+    "images": [
+      "movies-1.jpg",
+      "movies-2.jpg",
+      "movies-3.jpg",
+      "movies-4.jpg"
+    ],
+    "techStack": "React and CSS."
+  },
+
+
   {
     "name": "Home Seeker",
     "website": "https://home-seeker.tkwebdev.ca",
     "github": "https://github.com/tonykieling/home-seeker",
     "description": [
-      "An automated system to web scrape information from Craigslist about rentals availability.",
-      "It helped my wife and I to find our new home, quickly and easily receiving emails to shortcut our search.",
-      "Mission accomplished and happy new homers! 🏠😊"
+      "An automated full-stack system to web scrape rental availability info from Craigslist, which emails new offers and helps to shortcut the search. 🏠😊"
     ],
     "images": [
       "home-seeker-1.jpg",
@@ -44,14 +63,16 @@
       "home-seeker-3.jpg",
       "home-seeker-4.jpg"
     ],
-    "techStack": "Node.js, React, Atlas MongoDB, Node-Mailer, CSS, and React-Modal."
+    "techStack": "Node.js, React, CSS, MongoDB, and Node-Mailer."
   },
+
+
   {
     "name": "CRUD",
     "website": "https://crud.tkwebdev.ca",
     "github": "https://github.com/tonykieling/crud-vercel-react-node",
     "description": [
-      "A straight demonstration of a web system's basic principles for handling data:",
+      "Full-stack app to demonstrate the web system's basic principles for handling data:",
       "Create, Retrieve, Update, and Delete"
     ],
     "images": [
@@ -60,6 +81,37 @@
       "crud-3.jpg",
       "crud-4.jpg"
     ],
-    "techStack": "Node, React, MongoDB Atlas, CSS, HTML, and Mongoose."
+    "techStack": "Node, React, MongoDB, CSS."
+  },
+
+
+  {
+    "name": "Deck Master",
+    "website": "https://tkwebsec04.azurewebsites.net",
+    "github": "https://github.com/tonykielingbcit/react-project",
+    "description": [
+      "An e-commerce application that allows managing user profiles and clients to purchase items using PayPal as payment."
+    ],
+    "images": [
+      "deck-master-1.jpg",
+      "deck-master-2.jpg",
+      "deck-master-3.jpg",
+      "deck-master-4.jpg"
+    ],
+    "techStack": "C# / .Net, JavaScript, Paypal, MS-SQL, and Bootstrap."
+  },
+
+
+  {
+    "name": "Vue Calculator",
+    "website": "https://tonykielingbcit.github.io/vue-assignment/",
+    "github": "https://github.com/tonykielingbcit/vue-assignment",
+    "description": [
+      "A BCIT front-end assignment to build a calculator."
+    ],
+    "images": [
+      "vue-calculator.jpg"
+    ],
+    "techStack": "Vue and CSS."
   }
 ]

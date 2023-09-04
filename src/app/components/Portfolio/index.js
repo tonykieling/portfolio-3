@@ -3,9 +3,9 @@ import Blueprint from "./Blueprint";
 
 const Portfolio = () => {
   return (
-    <section className="flex flex-col items-center bg-stone-200" id="portfolio">
+    <section className="flex flex-col items-center bg-[#273448]" id="portfolio">
       
-      <h1 className="text-4xl font-semibold mt-7 mb-5">Portfolio</h1>
+      <h1 className="text-4xl font-semibold mt-7 mb-5 text-[#F3F3F1]">Portfolio</h1>
       {/* <p className="text-lg">Some of the projects I have been working on:</p> */}
       
       { items.map((props, index) => (

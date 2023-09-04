@@ -57,15 +57,15 @@ const Footer = () => {
         </li>
       </nav>
 
-      <div>
+      <div className="max-[800px]:mb-20">
         <span 
           className={`justify-center pt-3  text-lg tracking-wide `} 
           style={{fontVariant: "small-caps"}}> &nbsp;Tony Kieling
         </span>
           <span>
-            &copy; 2019 - {getYear()}.
+            &copy; 2019 - {getYear()}
           </span>
-        <span> All rights reserved.</span>
+        <p className="text-center mt-4"> All rights reserved</p>
       </div> 
 
     </section>
