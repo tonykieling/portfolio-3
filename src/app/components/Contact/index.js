@@ -5,7 +5,7 @@ import GoogleReCAPTCHA from 'react-google-recaptcha';
 const RECAPTCHA_SITE_KEY = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || "6LfzerIcAAAAAPmprwz6IhRAiQ_b0YG-onsOuS5h";
 
 const Contact = () => {
-  
+
   const [ state, setState ] = useState({
     // name: "name",
     // email: "email@tk.ca",
@@ -235,6 +235,7 @@ const Contact = () => {
       />
       
       <div ref = { refFinalMessage }></div>
+      
     </section>
   )
 }
