@@ -125,10 +125,10 @@ const Contact = () => {
       });
 
       const result = await res.json();
+      console.log("result::: ", result);
 
       if ("error" in result) throw result.error;
   
-      console.log("result::: ", result)
       setButtonMessage("Message has been sent successfully!");
       setKeepGoodMessage(true);
 
@@ -235,7 +235,7 @@ const Contact = () => {
       />
       
       <div ref = { refFinalMessage }></div>
-      
+
     </section>
   )
 }
