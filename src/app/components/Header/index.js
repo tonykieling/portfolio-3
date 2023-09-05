@@ -5,9 +5,9 @@ const Header = () => {
 
   return (
     // <section className="sticky z-10 top-0 max-[320px]:pl-9 max-[350px]:pl-8 max-[450px]:pl-5 text-center py-5  bg-[#458ABB]" id="header">
-    <section className="sticky z-10 top-0 max-[320px]:pl-9 max-[350px]:pl-8 max-[450px]:pl-5 text-center py-5  bg-[blue]" id="header">
+    <section className="sticky z-10 top-0 max-[320px]:pl-9 max-[350px]:pl-8 max-[450px]:pl-5 text-center py-5  bg-[blue] shadow-md shadow-slate-600" id="header">
       
-      <div className="absolute top-0 left-4 max-[350px]:left-3 h-full">
+      {/* <div className="absolute top-0 left-4 max-[350px]:left-3 h-full">
         <div className="h-full flex flex-col justify-center">
           <Link href={"#about"} >
             <Image 
@@ -19,7 +19,7 @@ const Header = () => {
             />
           </Link>
         </div>
-      </div>
+      </div> */}
 
       <nav className="list-none text-center font-bold text-xl text--stone-200 max-[450px]:text-lg max-[320px]:text-base text-[#FFFFFF]">
         <li className="max-[320px]:px-2 max-[450px]:px-3 max-[600px]:px-4 px-6 inline-block   hover:cursor-pointer">
