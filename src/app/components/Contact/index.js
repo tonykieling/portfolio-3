@@ -7,9 +7,12 @@ const RECAPTCHA_SITE_KEY = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
 const Contact = () => {
   
   const [ state, setState ] = useState({
-    name: "name",
-    email: "email@tk.ca",
-    message: "message"
+    // name: "name",
+    // email: "email@tk.ca",
+    // message: "message"
+    name: "",
+    email: "",
+    message: ""
   });
   
   const reCAPTCHARef  = useRef(null);
@@ -37,7 +40,7 @@ const Contact = () => {
 
 
   const BadMessage = () => (
-    <div className="mt-2 mb-5 text-center">
+    <div className="mt-2 mb-5 text-center bg-[#D9EAF4] p-2">
       <p className="mb-2"><b>Something unexpected happened. &nbsp;:(</b></p>
       <p><b>Please try it later or</b></p>
       <p><b>email to <a style={{color: "blue"}} href="mailto:tony.kieling@gmail.com"> tony.kieling@gmail.com </a></b></p>
@@ -46,8 +49,8 @@ const Contact = () => {
 
 
   const GoodMessage = () => (
-    <div className="mt-2 mb-5 text-center">
-      <p className="mb-2"><b>Thank you for your message! &nbsp;\o/</b></p>
+    <div className="mt-2 mb-5 text-center bg-[#D9EAF4] p-2 py-3">
+      <span><b>Thank you for your message! &nbsp;\o/</b></span>
     </div>
   );
 
@@ -159,7 +162,7 @@ const Contact = () => {
         <h2 className="text-lg my-3 font-semibold text-yellow-50">Feel free to reach out.</h2>
 
         <input 
-          className       = {`w-11/12 min-[500px]:w-2/3 min-[800px]:w-1/2 rounded-md pl-2 mb-2 h-9 bg-[#F3F3F1] ${inputRedBox.name && "outline outline-red-600 outline-[3px"}`}
+          className       = {`w-11/12 min-[500px]:w-2/3 min-[800px]:w-1/2 rounded-md pl-2 mb-2 h-9 bg-[#F3F3F1] outline-none ${inputRedBox.name && "outline outline-red-600 outline-[5px]"}`}
           placeholder       = "Your name" 
           data-bs-toggle    = "tooltip" 
           data-bs-placement = "top"
@@ -175,7 +178,7 @@ const Contact = () => {
         />
 
         <input 
-          className       = {`w-11/12 min-[500px]:w-2/3 min-[800px]:w-1/2 rounded-md pl-2 mb-2 h-9 bg-[#F3F3F1] ${inputRedBox.email && "outline outline-red-600 outline-[3px]"}`}
+          className       = {`w-11/12 min-[500px]:w-2/3 min-[800px]:w-1/2 rounded-md pl-2 mb-2 h-9 bg-[#F3F3F1] outline-none ${inputRedBox.email && "outline outline-red-600 outline-[5px]"}`}
           placeholder     = "Your email"
           data-bs-toggle  = "tooltip" 
           title           = "I will never share your email with anyone else."
@@ -191,7 +194,7 @@ const Contact = () => {
         />
 
         <textarea
-          className       = {`w-11/12 min-[500px]:w-2/3 min-[800px]:w-1/2 rounded-md pl-2 pt-2 mb-2 bg-[#F3F3F1] ${inputRedBox.message && "outline outline-red-600 outline-[3px"}`}
+          className       = {`w-11/12 min-[500px]:w-2/3 min-[800px]:w-1/2 rounded-md pl-2 pt-2 mb-2 bg-[#F3F3F1] outline-none ${inputRedBox.message && "outline outline-red-600 outline-[5px]"}`}
           rows            = "6"
           placeholder     = "Please, leave your message" 
           data-bs-toggle  = "tooltip" 
@@ -225,11 +228,11 @@ const Contact = () => {
 
       </article>
 
-      {/* <GoogleReCAPTCHA
+      <GoogleReCAPTCHA
           ref={reCAPTCHARef}
           size='invisible'
           sitekey={RECAPTCHA_SITE_KEY}
-      /> */}
+      />
       
       <div ref = { refFinalMessage }></div>
     </section>
