@@ -3,33 +3,14 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
   --header-height: 67px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
 html {
-  /* scroll-padding-top: 68px; */
   scroll-padding: var(--header-height);
 }
 
 body {
-  /* color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb)); */
 
     height: 100vh;
     height: 100dvh;
@@ -38,11 +19,21 @@ body {
     color: #2a2b2c;
 }
 
+
+/* Carousel buttons */
 .carousel .control-next.control-arrow:before {
   border-left: 8px solid red !important;
 }
-
 .carousel .control-prev.control-arrow:before {
   border-right: 8px solid red !important;
 }
 
+
+/* Animate Contact */
+.component-hidden {
+  opacity: 0;
+  transform: translateY(7rem);
+}
+.component-visible {
+  transition: transform 1s, opacity 1s;
+}

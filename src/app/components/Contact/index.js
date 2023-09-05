@@ -1,5 +1,5 @@
 "use client";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import GoogleReCAPTCHA from 'react-google-recaptcha';
 
 const RECAPTCHA_SITE_KEY = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || "6LfzerIcAAAAAPmprwz6IhRAiQ_b0YG-onsOuS5h";
@@ -14,7 +14,8 @@ const Contact = () => {
     email: "",
     message: ""
   });
-  
+
+  const contactRef    = useRef(null);
   const reCAPTCHARef  = useRef(null);
   const refName       = useRef(null);
   const refEmail      = useRef(null);
@@ -31,6 +32,16 @@ const Contact = () => {
     message   : false
   });
   
+  const [ onContac, setOnContact ] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(([entry]) => {
+      setOnContact(entry.isIntersecting);
+    });
+    observer.observe(contactRef.current);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
 
   const getReCaptchaToken = async () => {
     await reCAPTCHARef.current.reset();
@@ -156,83 +167,87 @@ const Contact = () => {
 
 
   return (
-    <section id="contact" className="flex flex-col items-center bg-[#424342]">
-      <h1 className="text-4xl font-semibold mt-7 mb-5 text-yellow-50">Contact</h1>
-      <article className="flex flex-col items-center mb-5 w-11/12 min-[500px]:w-2/3 min-[800px]:w-1/2 border rounded-lg">
-        <h2 className="text-lg my-3 font-semibold text-yellow-50">Feel free to reach out.</h2>
+    <section id="contact" ref={contactRef} className="bg-[#424342]">
+    {/* <section id="contact" ref={contactRef} className={`flex flex-col items-center bg-[#424342] pt-[200px] ${onContac ? "animate-contact-card" : ""}`}> */}
 
-        <input 
-          className       = {`w-11/12 min-[500px]:w-2/3 min-[800px]:w-1/2 rounded-md pl-2 mb-2 h-9 bg-[#F3F3F1] outline-none ${inputRedBox.name && "outline outline-red-600 outline-[5px]"}`}
-          placeholder       = "Your name" 
-          data-bs-toggle    = "tooltip" 
-          data-bs-placement = "top"
-          data-bs-html      = "true"
-          title             = "Insert your name"
-          type        = "text"
-          name        = "name"
-          value       = { state.name }
-          onChange    = { handleChange }
-          onKeyDown   = { handleChange }
-          ref         = { refName}
-          disabled  = { buttonMessage === "Sending..." ? true : false }
-        />
+      <div className={`${onContac ? "component-visible" : "component-hidden"} flex flex-col items-center w-full`}>
+        <h1 className="text-4xl font-semibold mt-7 mb-5 text-yellow-50">Contact</h1>
+        <article className="flex flex-col items-center mb-5 w-11/12 min-[500px]:w-2/3 min-[800px]:w-1/2 border rounded-lg">
+          <h2 className="text-lg my-3 font-semibold text-yellow-50">Feel free to reach out.</h2>
 
-        <input 
-          className       = {`w-11/12 min-[500px]:w-2/3 min-[800px]:w-1/2 rounded-md pl-2 mb-2 h-9 bg-[#F3F3F1] outline-none ${inputRedBox.email && "outline outline-red-600 outline-[5px]"}`}
-          placeholder     = "Your email"
-          data-bs-toggle  = "tooltip" 
-          title           = "I will never share your email with anyone else."
-          aria-describedby= "emailHelp"
+          <input 
+            className       = {`w-11/12 min-[500px]:w-2/3 min-[800px]:w-1/2 rounded-md pl-2 mb-2 h-9 bg-[#F3F3F1] outline-none ${inputRedBox.name && "outline outline-red-600 outline-[5px]"}`}
+            placeholder       = "Your name" 
+            data-bs-toggle    = "tooltip" 
+            data-bs-placement = "top"
+            data-bs-html      = "true"
+            title             = "Insert your name"
+            type        = "text"
+            name        = "name"
+            value       = { state.name }
+            onChange    = { handleChange }
+            onKeyDown   = { handleChange }
+            ref         = { refName}
+            disabled  = { buttonMessage === "Sending..." ? true : false }
+          />
 
-          type        = "email"
-          name        = "email"
-          value       = { state.email }
-          onChange    = { handleChange }
-          onKeyDown  = { handleChange }
-          ref         = { refEmail }
-          disabled  = { buttonMessage === "Sending..." ? true : false }
-        />
+          <input 
+            className       = {`w-11/12 min-[500px]:w-2/3 min-[800px]:w-1/2 rounded-md pl-2 mb-2 h-9 bg-[#F3F3F1] outline-none ${inputRedBox.email && "outline outline-red-600 outline-[5px]"}`}
+            placeholder     = "Your email"
+            data-bs-toggle  = "tooltip" 
+            title           = "I will never share your email with anyone else."
+            aria-describedby= "emailHelp"
 
-        <textarea
-          className       = {`w-11/12 min-[500px]:w-2/3 min-[800px]:w-1/2 rounded-md pl-2 pt-2 mb-2 bg-[#F3F3F1] outline-none ${inputRedBox.message && "outline outline-red-600 outline-[5px]"}`}
-          rows            = "6"
-          placeholder     = "Please, leave your message" 
-          data-bs-toggle  = "tooltip" 
-          title           = "Insert your message"
-          // rows            = { MobileScreen ? 10 : 4}
+            type        = "email"
+            name        = "email"
+            value       = { state.email }
+            onChange    = { handleChange }
+            onKeyDown  = { handleChange }
+            ref         = { refEmail }
+            disabled  = { buttonMessage === "Sending..." ? true : false }
+          />
 
-          type        = "text"
-          name        = "message"
-          value       = { state.message }
-          onChange    = { handleChange }
-          onKeyDown   = { handleChange }
-          ref         = { refMessage }
-          disabled    = { buttonMessage === "Sending..." ? true : false }
-        />
+          <textarea
+            className       = {`w-11/12 min-[500px]:w-2/3 min-[800px]:w-1/2 rounded-md pl-2 pt-2 mb-2 bg-[#F3F3F1] outline-none ${inputRedBox.message && "outline outline-red-600 outline-[5px]"}`}
+            rows            = "6"
+            placeholder     = "Please, leave your message" 
+            data-bs-toggle  = "tooltip" 
+            title           = "Insert your message"
+            // rows            = { MobileScreen ? 10 : 4}
 
-        <button
-          type      = "button"
-          onClick   = { sendMessage }
-          className = {`bg-[blue] hover:bg-blue-800 hover:text-black text-yellow-100 hover:outline hover:outline-1 hover:outline-blue-950 font-bold py-2 px-4 mb-4 mt-3 rounded ${(buttonMessage === "Message has been sent successfully!") && "bg-green-700 text-yellow-400 hover:bg-green-700 hover: hover:text-yellow-400"} ${(buttonMessage === "Refresh your screen, please") && "bg-yellow-500 text-red-800 cursor-not-allowed hover:bg-yellow-500 hover:text-red-800 hover:outline-yellow-600"}`}
-          ref       = { refButton }
-          disabled  = { buttonMessage === "Sending..." ? true : false }
+            type        = "text"
+            name        = "message"
+            value       = { state.message }
+            onChange    = { handleChange }
+            onKeyDown   = { handleChange }
+            ref         = { refMessage }
+            disabled    = { buttonMessage === "Sending..." ? true : false }
+          />
 
-          data-bs-toggle  = "tooltip" 
-          title           = "Send your message"
-        >
-            { buttonMessage }
-        </button>
+          <button
+            type      = "button"
+            onClick   = { sendMessage }
+            className = {`bg-[blue] hover:bg-blue-800 hover:text-black text-yellow-100 hover:outline hover:outline-1 hover:outline-blue-950 font-bold py-2 px-4 mb-4 mt-3 rounded ${(buttonMessage === "Message has been sent successfully!") && "bg-green-700 text-yellow-400 hover:bg-green-700 hover: hover:text-yellow-400"} ${(buttonMessage === "Refresh your screen, please") && "bg-yellow-500 text-red-800 cursor-not-allowed hover:bg-yellow-500 hover:text-red-800 hover:outline-yellow-600"}`}
+            ref       = { refButton }
+            disabled  = { buttonMessage === "Sending..." ? true : false }
 
-        { buttonMessage === "Refresh your screen, please" && <BadMessage />}
-        { keepGoodMessage && <GoodMessage />}
+            data-bs-toggle  = "tooltip" 
+            title           = "Send your message"
+          >
+              { buttonMessage }
+          </button>
 
-      </article>
+          { buttonMessage === "Refresh your screen, please" && <BadMessage />}
+          { keepGoodMessage && <GoodMessage />}
 
-      <GoogleReCAPTCHA
+        </article>
+      </div>
+
+      {/* <GoogleReCAPTCHA
           ref={reCAPTCHARef}
           size='invisible'
           sitekey={RECAPTCHA_SITE_KEY}
-      />
+      /> */}
       
       <div ref = { refFinalMessage }></div>
 

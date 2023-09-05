@@ -6,8 +6,7 @@ import Contact from './components/Contact';
 
 export default function Home() {
   return (
-    // <main className="flex min-h-screen flex-col items-center justify-between p-24 border border-red-600">
-    <main className="flex min-h-screen flex-col">
+    <main className="flex min-h-screen flex-col bg-slate-300">
       <Header />
 
       <About />
