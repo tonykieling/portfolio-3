@@ -33,10 +33,14 @@ const Contact = () => {
   });
   
   const [ onContac, setOnContact ] = useState(false);
+  const [ initialState, setInitialState ] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(([entry]) => {
-      setOnContact(entry.isIntersecting);
+      if (entry.isIntersecting && !initialState) {
+        setOnContact(entry.isIntersecting);
+        setInitialState(true);
+      } 
     });
     observer.observe(contactRef.current);
   // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -171,9 +175,9 @@ const Contact = () => {
     {/* <section id="contact" ref={contactRef} className={`flex flex-col items-center bg-[#424342] pt-[200px] ${onContac ? "animate-contact-card" : ""}`}> */}
 
       <div className={`${onContac ? "component-visible" : "component-hidden"} flex flex-col items-center w-full`}>
-        <h1 className="text-4xl font-semibold mt-7 mb-5 text-yellow-50">Contact</h1>
-        <article className="flex flex-col items-center mb-5 w-11/12 min-[500px]:w-2/3 min-[800px]:w-1/2 border rounded-lg">
-          <h2 className="text-lg my-3 font-semibold text-yellow-50">Feel free to reach out.</h2>
+        <h1 className="text-4xl font-bold tracking-widest mt-7 mb-5 text-slate-100">Contact</h1>
+        <article className="flex flex-col items-center mb-5 w-11/12 min-[500px]:w-2/3 min-[1000px]:w-1/2 border rounded-lg">
+          <h2 className="text-lg my-3 font-semibold text-slate-100">Feel free to reach out.</h2>
 
           <input 
             className       = {`w-11/12 min-[500px]:w-2/3 min-[800px]:w-1/2 rounded-md pl-2 mb-2 h-9 bg-[#F3F3F1] outline-none ${inputRedBox.name && "outline outline-red-600 outline-[5px]"}`}

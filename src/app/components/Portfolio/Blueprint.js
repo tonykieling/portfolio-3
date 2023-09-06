@@ -2,17 +2,34 @@
 import Image from "next/image";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
+import { useEffect, useRef, useState } from "react";
 
 
 export default function Blueprint(
   { props: {name, website, github, description, images, techStack} }
 ) {
 
+  const [ onItem, setOnItem ] = useState(false);
+  const [ initialState, setInitialState ] = useState(false);
+  const itemRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting && !initialState) {
+        setInitialState(true);
+        setOnItem(true);
+      } 
+    });
+    observer.observe(itemRef.current);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+
   return (
     // <article className="relative z-0 flex flex-col p-7 pb-19 my-5 max-[800px]:mx-1 min-[800px]:my-8 border rounded-md bg-[#D9EAF4]">
-    <article className="relative z-0 flex flex-col p-7 pb-19 my-5 max-[800px]:mx-1 min-[800px]:my-8 rounded-md bg-slate-300">
+    <article className={`relative z-0 flex flex-col p-7 pb-19 my-5 max-[800px]:mx-1 min-[800px]:my-8 rounded-md bg-slate-300 ${onItem ? "portfolio-item-visible" : "portfolio-item-hidden"}`} ref={itemRef}>
 
-      {/* <div className="absolute top-[-7px] left-[-7px] w-40 h-40 border-s-2 border-t-2 border-slate-400"></div> */}
+{/* portfolio-item-visible */}
 
       <p className="flex text-left text-3xl font-bold mb-3">
         <a target="_blank" rel="noopener noreferrer"
@@ -62,7 +79,7 @@ export default function Blueprint(
                   showThumbs={false} 
                   showIndicators={false}
                   onClickItem={() => window.open(website, "_blank")}
-                  interval="3333"
+                  interval="3500"
                 >
                     { images.map((image, index) => (
                         <div key={index} style={{textAlign: "center"}}>

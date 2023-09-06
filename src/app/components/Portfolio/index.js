@@ -1,23 +1,44 @@
-import items from "./items.json";
+"use client";
+
 import Blueprint from "./Blueprint";
+import { useEffect, useRef, useState } from "react";
+import items from "./items.json";
 
 const Portfolio = () => {
+  const [ onPortfolio, setOnPortfolio ] = useState(false);
+  const [ initialState, setInitialState ] = useState(false);
+  const portfolioRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting && !initialState) {
+        setInitialState(true);
+        setOnPortfolio(entry.isIntersecting);
+      }
+    });
+    observer.observe(portfolioRef.current);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+
   return (
-    // <section className="flex flex-col items-center bg-[#273448]" id="portfolio">
-    // <section className="flex flex-col items-center bg-[#FEFEFE]" id="portfolio">
-    <section className="flex flex-col items-center bg-slate-300" id="portfolio">
+    <section className="bg-slate-300" id="portfolio">
+    {/* <section className="bg-red-700" id="portfolio"> */}
       
-      <h1 className="text-4xl font-semibold mt-7 mb-5 text-slate-900">Portfolio</h1>
-      {/* <p className="text-lg">Some of the projects I have been working on:</p> */}
-      
-      { items.map((props, index) => (
-          <div key={index} className="w-full min-[700px]:w-3/4">
-            <Blueprint
-              props = {props}
-            />
-          </div>
-        )
-      )}
+      <div 
+        className={`${onPortfolio ? "component-visible" : "component-hidden"} flex flex-col items-center w-full`}
+      >
+        <h1 className="text-4xl font-bold tracking-widest mt-7 mb-5 text-slate-900" ref={portfolioRef}>Portfolio</h1>
+        
+        { items.map((props, index) => (
+            <div key={index} className="w-full min-[700px]:w-3/4">
+              <Blueprint
+                props = {props}
+              />
+            </div>
+          )
+        )}
+      </div>
 
     </section>
   )

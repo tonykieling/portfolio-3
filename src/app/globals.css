@@ -29,11 +29,30 @@ body {
 }
 
 
-/* Animate Contact */
+/* Animate Components */
 .component-hidden {
   opacity: 0;
   transform: translateY(7rem);
 }
 .component-visible {
-  transition: transform 1s, opacity 1s;
+  transition: transform 1s, opacity 2s;
+}
+
+/* Animate Portfolio items */
+.portfolio-item-hidden {
+  opacity: 0;
+}
+.portfolio-item-visible {
+  transition: opacity 1.7s;
+}
+
+/* Animate More Info text */
+.more-info-hidden {
+  display: none;
+  opacity: 0;
+}
+.more-info-visible {
+  transition: opacity 3s, display 3.5s;
+  display: block;
+  opacity: 1;
 }

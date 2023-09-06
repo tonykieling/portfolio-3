@@ -1,7 +1,11 @@
-import Image from "next/image";
+// "use client";
+// import Image from "next/image";
 import Link from "next/link";
 
-const Header = () => {
+const Header = ({navLinks}) => {
+  // useEffect(() => {
+  //   console.log("href: ", window.location)
+  // }, [window.href]);
 
   return (
     // <section className="sticky z-10 top-0 max-[320px]:pl-9 max-[350px]:pl-8 max-[450px]:pl-5 text-center py-5  bg-[#458ABB]" id="header">
@@ -23,7 +27,7 @@ const Header = () => {
 
       <nav className="list-none text-center font-bold text-xl text--stone-200 max-[450px]:text-lg max-[320px]:text-base text-[#FFFFFF]">
         <li className="max-[320px]:px-2 max-[450px]:px-3 max-[600px]:px-4 px-6 inline-block   hover:cursor-pointer">
-          <Link href={"#about"}>
+          <Link href="#about">
             <p className="relative group">
               <span>About</span>
               <span className="absolute -bottom-1 left-0 w-0 h-1 bg-[#D9EAF4] transition-all duration-500 group-hover:w-full"></span>
@@ -42,7 +46,7 @@ const Header = () => {
         </li>
 
         <li className="max-[320px]:px-2 max-[450px]:px-3 max-[600px]:px-4 px-6 inline-block hover:cursor-pointer">
-          <Link href={"#contact"}>
+          <Link href="#contact">
             <p className="relative group">
               <span>Contact</span>
               <span className="absolute -bottom-1 left-0 w-0 h-1 bg-[#D9EAF4] text-[#273448] transition-all duration-500 group-hover:w-full"></span>
