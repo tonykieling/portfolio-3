@@ -4,13 +4,13 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a lo
 import { Carousel } from 'react-responsive-carousel';
 import { useEffect, useRef, useState } from "react";
 
-
 export default function Blueprint(
   { props: {name, website, github, description, images, techStack} }
 ) {
 
   const [ onItem, setOnItem ] = useState(false);
   const [ initialState, setInitialState ] = useState(false);
+
   const itemRef = useRef(null);
 
   useEffect(() => {
@@ -18,8 +18,9 @@ export default function Blueprint(
       if (entry.isIntersecting && !initialState) {
         setInitialState(true);
         setOnItem(true);
-      } 
+      }
     });
+
     observer.observe(itemRef.current);
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);

@@ -1,10 +1,13 @@
 "use client";
 import { useState, useRef, useEffect } from "react";
 import GoogleReCAPTCHA from 'react-google-recaptcha';
+import { GlobalContext } from "../context";
+import { useContext } from "react";
 
 const RECAPTCHA_SITE_KEY = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || "6LfzerIcAAAAAPmprwz6IhRAiQ_b0YG-onsOuS5h";
 
 const Contact = () => {
+  const { setCurrentMenu } = useContext(GlobalContext);
 
   const [ state, setState ] = useState({
     // name: "name",
@@ -37,12 +40,25 @@ const Contact = () => {
 
   useEffect(() => {
     const observer = new IntersectionObserver(([entry]) => {
-      if (entry.isIntersecting && !initialState) {
-        setOnContact(entry.isIntersecting);
-        setInitialState(true);
-      } 
-    });
+        if (entry.isIntersecting && !initialState) {
+          setOnContact(entry.isIntersecting);
+          setInitialState(true);
+        }
+
+        if (entry.isIntersecting) setCurrentMenu("contact");
+
+      }, 
+      {
+        rootMargin: "-300px"
+      }
+    );
+
     observer.observe(contactRef.current);
+
+    return() => {
+      if (contactRef.current) observer.unobserve
+      observer.disconnect();
+    }
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -247,11 +263,11 @@ const Contact = () => {
         </article>
       </div>
 
-      {/* <GoogleReCAPTCHA
+      <GoogleReCAPTCHA
           ref={reCAPTCHARef}
           size='invisible'
           sitekey={RECAPTCHA_SITE_KEY}
-      /> */}
+      />
       
       <div ref = { refFinalMessage }></div>
 
