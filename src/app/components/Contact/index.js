@@ -11,9 +11,6 @@ const Contact = () => {
   const { setCurrentMenu } = useContext(GlobalContext);
 
   const [ state, setState ] = useState({
-    // name: "name",
-    // email: "email@tk.ca",
-    // message: "message"
     name: "",
     email: "",
     message: ""
@@ -116,15 +113,12 @@ const Contact = () => {
 
 
   const sendMessage = async () => {
-    // console.log("message::: ", state);
     setKeepGoodMessage(false);
     const nameIsNotValid = state.name.trim().length === 0;
     const emailIsNotValid = state.email.trim().length === 0 || !new RegExp(/[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,15}/g).test(state.email);
     const messageIsNotValid = state.message.trim().length === 0;
 
-    // console.log("no name, email or message", nameIsNotValid, emailIsNotValid, messageIsNotValid, state.email, !new RegExp(/[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,15}/g).test(state.email))
     if (nameIsNotValid || emailIsNotValid || messageIsNotValid) {
-      // console.log("opppppss")
       setInputRedBox({
         ...inputRedBox,
         name: nameIsNotValid,
@@ -137,8 +131,7 @@ const Contact = () => {
     setButtonMessage("Sending...");
 
     try {
-      const reCaptchaToken = await getReCaptchaToken(); ///////////////////////////////////////////
-      // const reCaptchaToken = "token";
+      const reCaptchaToken = await getReCaptchaToken();
 
 
       const res = await fetch("/api", {
@@ -155,7 +148,6 @@ const Contact = () => {
       });
 
       const result = await res.json();
-      console.log("result::: ", result);
 
       if ("error" in result) throw result.error;
   
@@ -187,7 +179,6 @@ const Contact = () => {
 
   return (
     <section id="contact" ref={contactRef} className="bg-[#424342]">
-    {/* <section id="contact" ref={contactRef} className={`flex flex-col items-center bg-[#424342] pt-[200px] ${onContac ? "animate-contact-card" : ""}`}> */}
 
       <div className={`${onContac ? "component-visible" : "component-hidden"} flex flex-col items-center w-full`}>
         <h1 className="text-4xl font-bold tracking-widest mt-7 mb-5 text-slate-100">Contact</h1>
@@ -232,7 +223,6 @@ const Contact = () => {
             placeholder     = "Please, leave your message" 
             data-bs-toggle  = "tooltip" 
             title           = "Insert your message"
-            // rows            = { MobileScreen ? 10 : 4}
 
             type        = "text"
             name        = "message"
@@ -262,11 +252,11 @@ const Contact = () => {
         </article>
       </div>
 
-      {/* <GoogleReCAPTCHA
+      <GoogleReCAPTCHA
           ref={reCAPTCHARef}
           size='invisible'
           sitekey={RECAPTCHA_SITE_KEY}
-      /> */}
+      />
       
       <div ref = { refFinalMessage }></div>
 

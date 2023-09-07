@@ -29,12 +29,9 @@ const About = () => {
 
 
   return (
-    // <section className="bg-[#F9F9F9] h-[calc(100vh-(var(--header-height)))] flex flex-col" id="about">
-    // <section className="bg-[#fFf] h-[calc(100vh-(var(--header-height)))] flex flex-col" id="about">
     <section className="bg-[#FFF] flex flex-col" id="about" ref={aboutRef}>
 
       <div className={`${moreInfoOpen ? "mt-6" : "h-[calc((100vh-(var(--header-height)))*0.8)]"} max-[550px]:${moreInfoOpen ? "mt-6" : "h-[calc((100vh-(var(--header-height)))*0.85)]"}`}>
-      {/* <div className=" max-[550px]:h-[calc((100vh-68px)*0.85)]"> */}
         <div className="flex h-full max-[550px]:flex-col max-[550px]:items-center">
           <div className="w-3/5 h-full ml-40 flex flex-col items-center justify-center max-[1000px]:ml-14 max-[800px]:ml-4 max-[550px]:order-3 max-[550px]:w-11/12 max-[550px]:ml-0 max-[550px]:text-center max-[550px]:h-1/2 max-[550px]:justify-start">
             <p className="font-extrabold tracking-widest text-5xl mb-8 text-center max-[550px]:text-3xl max-[550px]:mb-4 text-slate-900" id="moreinfo">

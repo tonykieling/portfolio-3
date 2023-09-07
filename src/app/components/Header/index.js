@@ -8,7 +8,6 @@ const Header = () => {
   const { currentMenu } = useContext(GlobalContext);
 
   return (
-    // <section className="sticky z-10 top-0 max-[320px]:pl-9 max-[350px]:pl-8 max-[450px]:pl-5 text-center py-5  bg-[#458ABB]" id="header">
     <section className="sticky z-10 top-0 max-[320px]:pl-9 max-[350px]:pl-8 max-[450px]:pl-5 text-center py-5  bg-[blue] shadow-md shadow-slate-600" id="header">
       
       {/* it's gonna be my logo */}

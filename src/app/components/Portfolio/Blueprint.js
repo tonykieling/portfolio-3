@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
 import { useEffect, useRef, useState } from "react";
 
@@ -34,10 +34,7 @@ export default function Blueprint(
 
 
   return (
-    // <article className="relative z-0 flex flex-col p-7 pb-19 my-5 max-[800px]:mx-1 min-[800px]:my-8 border rounded-md bg-[#D9EAF4]">
     <article className={`relative z-0 flex flex-col p-7 pb-19 my-5 max-[800px]:mx-1 min-[800px]:my-8 rounded-md bg-slate-300 ${onItem ? "portfolio-item-visible" : "portfolio-item-hidden"}`} ref={itemRef}>
-
-{/* portfolio-item-visible */}
 
       <p className="flex text-left text-3xl font-bold mb-3">
         <a target="_blank" rel="noopener noreferrer"
@@ -111,11 +108,6 @@ export default function Blueprint(
       { description.map((desc, index) => <p key={index} className="text-lg"> { desc } </p>)}
 
       <p className="text-lg mt-2"><span className="font-bold">Tech stack includes: </span>{ techStack }</p>
-
-
-      {/* <div className="absolute bottom-[-2px] right-2 max-[800px]:bottom-1 min-[800px]:right-[25px] w-40 h-40 border-e-2 border-b-2 border-slate-400"></div> */}
-      {/* <div className="w-3/4 border-[3px] self-center mb-4 mt-6 border-slate-400"></div> */}
-
 
     </article>
   );
