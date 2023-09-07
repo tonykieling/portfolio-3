@@ -8,28 +8,28 @@ import { useContext } from "react";
 
 const Portfolio = () => {
   const [ onPortfolio, setOnPortfolio ] = useState(false);
-  const [ initialState, setInitialState ] = useState(false);
+  const [ initialState, setInitialState ] = useState(true);
   const { setCurrentMenu } = useContext(GlobalContext);
   const portfolioRef = useRef(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(([entry]) => {
-        if (entry.isIntersecting && !initialState) {
-          setInitialState(true);
-          setOnPortfolio(entry.isIntersecting);
+        if (entry.isIntersecting && initialState) {
+          setOnPortfolio(true);
+          setInitialState(false);
         }
 
         if (entry.isIntersecting) setCurrentMenu("portfolio");
 
       },
-      { rootMargin: "-300px" }
+      { threshold: 0.1 }
     );
 
     observer.observe(portfolioRef.current);
 
     return() => {
-      if (portfolioRef.current) observer.unobserve(portfolioRef.current);
       observer.disconnect();
+      if (portfolioRef) observer.unobserve(portfolioRef);
     }
 
   // eslint-disable-next-line react-hooks/exhaustive-deps

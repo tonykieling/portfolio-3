@@ -1,4 +1,5 @@
 "use client";
+
 import Image from "next/image";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
@@ -9,19 +10,25 @@ export default function Blueprint(
 ) {
 
   const [ onItem, setOnItem ] = useState(false);
-  const [ initialState, setInitialState ] = useState(false);
+  const [ initialState, setInitialState ] = useState(true);
 
   const itemRef = useRef(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(([entry]) => {
-      if (entry.isIntersecting && !initialState) {
-        setInitialState(true);
+      if (entry.isIntersecting && initialState) {
         setOnItem(true);
+        setInitialState(false);
       }
     });
 
     observer.observe(itemRef.current);
+
+    return() => {
+      observer.disconnect();
+      if (itemRef) observer.unobserve(itemRef);
+    }
+
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 

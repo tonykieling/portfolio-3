@@ -1,4 +1,5 @@
 "use client";
+
 import { useState, useRef, useEffect } from "react";
 import GoogleReCAPTCHA from 'react-google-recaptcha';
 import { GlobalContext } from "../context";
@@ -36,29 +37,27 @@ const Contact = () => {
   });
   
   const [ onContac, setOnContact ] = useState(false);
-  const [ initialState, setInitialState ] = useState(false);
+  const [ initialState, setInitialState ] = useState(true);
 
   useEffect(() => {
     const observer = new IntersectionObserver(([entry]) => {
-        if (entry.isIntersecting && !initialState) {
-          setOnContact(entry.isIntersecting);
-          setInitialState(true);
+        if (entry.isIntersecting && initialState) {
+          setOnContact(true);
+          setInitialState(false);
         }
 
         if (entry.isIntersecting) setCurrentMenu("contact");
-
       }, 
-      {
-        rootMargin: "-300px"
-      }
+      { threshold: 0.5 }
     );
 
     observer.observe(contactRef.current);
 
     return() => {
-      if (contactRef.current) observer.unobserve
       observer.disconnect();
+      if (contactRef) observer.unobserve(contactRef);
     }
+    
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -117,15 +116,15 @@ const Contact = () => {
 
 
   const sendMessage = async () => {
-    console.log("message::: ", state);
+    // console.log("message::: ", state);
     setKeepGoodMessage(false);
     const nameIsNotValid = state.name.trim().length === 0;
     const emailIsNotValid = state.email.trim().length === 0 || !new RegExp(/[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,15}/g).test(state.email);
     const messageIsNotValid = state.message.trim().length === 0;
 
-    console.log("no name, email or message", nameIsNotValid, emailIsNotValid, messageIsNotValid, state.email, !new RegExp(/[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,15}/g).test(state.email))
+    // console.log("no name, email or message", nameIsNotValid, emailIsNotValid, messageIsNotValid, state.email, !new RegExp(/[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,15}/g).test(state.email))
     if (nameIsNotValid || emailIsNotValid || messageIsNotValid) {
-      console.log("opppppss")
+      // console.log("opppppss")
       setInputRedBox({
         ...inputRedBox,
         name: nameIsNotValid,
@@ -263,11 +262,11 @@ const Contact = () => {
         </article>
       </div>
 
-      <GoogleReCAPTCHA
+      {/* <GoogleReCAPTCHA
           ref={reCAPTCHARef}
           size='invisible'
           sitekey={RECAPTCHA_SITE_KEY}
-      />
+      /> */}
       
       <div ref = { refFinalMessage }></div>
 

@@ -14,14 +14,14 @@ const About = () => {
   useEffect(() => {
     const observer = new IntersectionObserver(([entry]) => 
       (entry.isIntersecting) && setCurrentMenu("about"),
-      { rootMargin: "-300px" }
+      { threshold: 0.5 }
     );
 
     observer.observe(aboutRef.current);
     
     return() => {
-      if (aboutRef.current) observer.unobserve(aboutRef.current);
       observer.disconnect();
+      if (aboutRef) observer.unobserve(aboutRef);
     }
     
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -31,7 +31,7 @@ const About = () => {
   return (
     // <section className="bg-[#F9F9F9] h-[calc(100vh-(var(--header-height)))] flex flex-col" id="about">
     // <section className="bg-[#fFf] h-[calc(100vh-(var(--header-height)))] flex flex-col" id="about">
-    <section className="bg-[#fFf] flex flex-col" id="about" ref={aboutRef}>
+    <section className="bg-[#FFF] flex flex-col" id="about" ref={aboutRef}>
 
       <div className={`${moreInfoOpen ? "mt-6" : "h-[calc((100vh-(var(--header-height)))*0.8)]"} max-[550px]:${moreInfoOpen ? "mt-6" : "h-[calc((100vh-(var(--header-height)))*0.85)]"}`}>
       {/* <div className=" max-[550px]:h-[calc((100vh-68px)*0.85)]"> */}
