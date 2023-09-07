@@ -99,7 +99,7 @@ const About = () => {
       >
         <div className="flex align-bottom">
           <Link 
-            href={"#portfolio"} 
+            href={"#portfolio"}
           >
             <Image 
               src={"/images/arrow-down.svg"}
@@ -107,7 +107,7 @@ const About = () => {
               height={60}
               alt="arrow down"
               title="Keep going for more"
-              className={`hover:border hover:border-gray-900 rounded-full`}
+              className={"pointer-events-none sm:pointer-events-auto hover:border hover:border-gray-900 rounded-full"}
             />
 
           </Link> 
