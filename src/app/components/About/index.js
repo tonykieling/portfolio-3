@@ -57,8 +57,7 @@ const About = () => {
             </Link>
 
             <div 
-              className={`flex flex-col px-20 text-xl leading-loose max-[900px]:leading-relaxed max-[900px]:mx-4 max-[750px]:text-xl max-[750px]:leading-loose max-[550px]:text-lg text-slate-900 w-full ${moreInfoOpen ? "block" : "hidden"} max-[600px]:px-8 mb-4`}
-              // className={`flex flex-col px-20 text-xl leading-loose max-[900px]:leading-relaxed max-[900px]:mx-4 max-[750px]:text-xl max-[750px]:leading-loose max-[550px]:text-lg text-slate-900 w-full ${moreInfoOpen ? "more-info-visible" : "more-info-hidden"} max-[600px]:px-8 mb-4`}
+              className={`flex flex-col px-20 text-2xl leading-loose max-[900px]:leading-relaxed max-[900px]:mx-4 max-[750px]:text-xl max-[750px]:leading-loose max-[550px]:text-lg text-slate-900 w-full ${moreInfoOpen ? "block" : "hidden"} max-[600px]:px-8 mb-4`}
             >
               <p>
                 I offer a unique blend of over ten years of experience as a Systems Analyst, specializing in Service Management and ITIL processes, coupled with a track record as a Software Developer. I excel in delivering efficient and secure software solutions.
