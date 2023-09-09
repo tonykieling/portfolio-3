@@ -16,8 +16,8 @@ export default function Home() {
         <Header />
 
         <About />
-        <Portfolio />
-        <Contact />
+        {/* <Portfolio /> */}
+        {/* <Contact /> */}
 
         <Footer />
       </GlobalProvider>

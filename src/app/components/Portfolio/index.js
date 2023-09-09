@@ -43,6 +43,7 @@ const Portfolio = () => {
         className={`${onPortfolio ? "component-visible" : "component-hidden"} flex flex-col items-center w-full`}
       >
         <h1 className="text-4xl font-bold tracking-widest mt-7 mb-5 text-slate-900">Portfolio</h1>
+        <h3 className="text-xl font-semibold tracking-wide text-center"> Some of the projects I&apos;ve been collaborating with:</h3>
         
         { items.map((props, index) => (
             <div key={index} className="w-full min-[700px]:w-3/4">

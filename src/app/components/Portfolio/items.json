@@ -55,7 +55,7 @@
     "website": "https://home-seeker.tkwebdev.ca",
     "github": "https://github.com/tonykieling/home-seeker",
     "description": [
-      "An automated full-stack system to web scrape rental availability info from Craigslist, which emails new offers and helps to shortcut the search. 🏠😊"
+      "An automated full-stack system to web scrape rental availability info from Craigslist, which emails targeted offers to shortcut the rental search. 🏠😊"
     ],
     "images": [
       "home-seeker-1.jpg",

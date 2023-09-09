@@ -30,6 +30,7 @@ body {
 
 
 /* Animate Components */
+/* it is applied for all components (About, Portfoloio, and Contact) */
 .component-hidden {
   opacity: 0;
   transform: translateY(7rem);
@@ -37,6 +38,40 @@ body {
 .component-visible {
   transition: transform 1s, opacity 2s;
 }
+
+/* Animate About items */
+.about-name-hidden {
+  opacity: 0;
+  transform: translateY(-7rem);
+}
+.about-name-visible {
+  transition: transform 1.5s, opacity 2s;
+}
+
+.about-description-hidden {
+  opacity: 0;
+  transform: translateX(-27rem);
+}
+.about-description-visible {
+  transition: transform 1.5s, opacity 2s;
+}
+
+.about-picture-hidden {
+  opacity: 0;
+  transform: translateX(27rem);
+}
+.about-picture-visible {
+  transition: transform 1.5s, opacity 2s;
+}
+
+.about-others-hidden {
+  opacity: 0;
+  transform: translateY(22rem);
+}
+.about-others-visible {
+  transition: transform 1.5s, opacity 2s;
+}
+
 
 /* Animate Portfolio items */
 .portfolio-item-hidden {
