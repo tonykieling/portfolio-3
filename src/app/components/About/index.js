@@ -48,8 +48,9 @@ const About = () => {
       <div className={`mt-6 ${moreInfoOpen ? "" : "h-[calc((100vh-(var(--header-height)))*0.8)]"} max-[550px]:${moreInfoOpen ? "" : "h-[calc((100vh-(var(--header-height)))*0.85)]"}`}>
         <div className={`flex h-full flex-col justify-start min-[350px]:justify-around min-[700px]:flex-row items-center ${moreInfoOpen ? "min-[700px]:items-start" : ""}`}>
           <div className="w-11/12 h-full  flex flex-col items-center justify-center min-[700px]:ml-2 max-[699px]:order-3 min-[700px]:w-3/5 max-[700px]:h-1/2 max-[700px]:justify-start min-[900px]:ml-20 min-[1000px]:ml-36">
-            <p className={`${oregano.className} ${onAbout ? "about-name-visible" : "about-name-hidden"} ${moreInfoOpen ? "" : ""} font-extrabold tracking-widest text-5xl mb-4 text-center min-[700px]:text-7xl min-[700px]:mb-5 text-slate-900`} id="moreinfo">
-              Tony Kieling</p>
+            <p className={`${oregano.className} ${onAbout ? "about-name-visible" : "about-name-hidden"} max-[700px]:mt-1 font-extrabold tracking-widest text-5xl mb-4 text-center min-[700px]:text-7xl min-[700px]:mb-5 text-slate-900`} id="moreinfo">
+              Tony Kieling
+            </p>
             <p 
               className={`${onAbout ? "about-description-visible" : "about-description-hidden"} text-left mx-4 min-[900px]:mx-12 min-[700px]:leading-loose text-base min-[400px]:text-lg min-[700px]:text-xl  `}
             >
@@ -93,14 +94,20 @@ const About = () => {
           </div>
 
           
-          <div className={`${onAbout ? "about-picture-visible" : "about-picture-hidden"} h-1/3 w-3/4 flex justify-center order-1 min-[700px]:order-0  min-[700px]:w-2/5 min-[700px]:h-1/2 min-[1200px]:ml-3 min-[900px]:justify-start   ${moreInfoOpen ? "min-[700px]:h-screen min-[700px]:pt-20" : ""}`} id="about">
-            <Image 
-              src={"/images/tk.webp"}
-              width={300}
-              height={300}
-              alt="TK's picture"
-              className={`rounded-full w-auto ${moreInfoOpen ? "h-52 min-[700px]:h-1/4 min-[700px]:w-3/4 min-[1200px]:w-1/2" : ""}`}
-            />
+          <div className={`${onAbout ? "about-picture-visible" : "about-picture-hidden"} h-1/3 w-3/4 flex justify-center order-1 min-[700px]:order-0  min-[700px]:w-2/5 min-[700px]:h-1/2 min-[1200px]:ml-3 min-[900px]:justify-start   ${moreInfoOpen ? "min-[700px]:h-screen min-[700px]:pt-20" : ""}     `} id="about">
+            <div 
+              className={`relative flex justify-center w-full h-auto min-[350px]:h-52 ${moreInfoOpen ? "min-[700px]:h-1/3" : ""} min-[900px]:justify-start`}
+            >
+              <Image 
+                src={"/images/tk.webp"}
+                width={200}
+                height={200}
+                alt="TK's picture"
+                className="object-center rounded-full"
+                // fill={true}
+                // className={`rounded-full w-auto h-auto ${moreInfoOpen ? "h-48 min-[700px]:h-1/4 min-[700px]:w-3/4 min-[1200px]:w-1/2" : ""}`}
+              />
+            </div>
           </div>
         </div>
       </div>

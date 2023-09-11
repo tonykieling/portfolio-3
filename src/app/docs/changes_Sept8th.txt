@@ -10,5 +10,6 @@ X4. font-family
 XX5. take out my pic and put it in the "more info"
 X6. 4444ms time for the carousel change
 X7. project card heights bigger only for mobile
-8. tackle the responsiviness of about card (name, description, moreinfo, picture, and arrow down)
+X 8. tackle the responsiviness of about card (name, description, moreinfo, picture, and arrow down)
+  still having a minor issue when screen < 350 and no moreInfoOpen
 

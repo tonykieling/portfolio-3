@@ -38,7 +38,8 @@ export default function Blueprint(
   return (
     <article className={`relative z-0 flex flex-col p-7 pb-19 my-6 max-[600px]:my-8 max-[800px]:mx-1 min-[800px]:my-8 rounded-md bg-slate-300 ${onItem ? "portfolio-item-visible" : "portfolio-item-hidden"}`} ref={itemRef}>
 
-      <p className="flex text-left text-3xl font-bold mb-3">
+      {/* <p className="flex justify-center text-3xl font-bold mb-5"> */}
+      <p className="flex text-3xl font-bold mb-5">
         <a target="_blank" rel="noopener noreferrer"
           href={website} 
           className="mr-4 hover:text-blue-700 hover:underline"
