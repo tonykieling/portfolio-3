@@ -20,8 +20,11 @@ const Footer = () => {
       <p className="font-semibold text-lg mb-4">Let&apos;s connect!</p>
 
       <nav className="list-none flex justify-center mb-4">
-        <li className="px-5">
-          <a href="mailto:tony.kieling@gmail.com">
+        {/* <li className="m-4 border-transparent hover:border hover:border-red-500 p-2 rounded-full"> */}
+        <li className="mx-5 my-2 outline outline-1 outline-slate-400 hover:outline-slate-600 hover:shadow-md hover:shadow-slate-600  p-2 rounded-full">
+          <a 
+            href="mailto:tony.kieling@gmail.com"
+          >
             <Image
               src={"/images/gmail.svg"}
               width={28}
@@ -32,7 +35,7 @@ const Footer = () => {
           </a>
         </li>
         
-        <li className="px-5">
+        <li className="mx-5 my-2 outline outline-1 outline-slate-400 hover:outline-slate-600 hover:shadow-md hover:shadow-slate-600  p-2 rounded-full">
           <a target="_blank" href="https://www.linkedin.com/in/tony-kieling/" rel="noopener noreferrer">
             <Image
               src={"/images/linkedin.svg"}
@@ -44,7 +47,7 @@ const Footer = () => {
           </a>
         </li>
 
-        <li className="px-5">
+        <li className="mx-5 my-2 outline outline-1 outline-slate-400 hover:outline-slate-600 hover:shadow-md hover:shadow-slate-600  p-2 rounded-full">
           <a target="_blank" href="https://github.com/tonykieling" rel="noopener noreferrer">
             <Image
               src={"/images/github.svg"}

@@ -12,4 +12,7 @@ X6. 4444ms time for the carousel change
 X7. project card heights bigger only for mobile
 X 8. tackle the responsiviness of about card (name, description, moreinfo, picture, and arrow down)
   still having a minor issue when screen < 350 and no moreInfoOpen
-
+X9. TK logo displayed on header
+  instead of logo image, a TK as text and gradiant
+X10. adding gradient in some components
+X11. tk pic with no bg

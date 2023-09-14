@@ -27,6 +27,9 @@ body {
 .carousel .control-prev.control-arrow:before {
   border-right: 8px solid red !important;
 }
+.carousel .control-arrow, .carousel.carousel-slider .control-arrow {
+  opacity: 0.7 !important;
+}
 
 
 /* Animate Components */
@@ -81,6 +84,10 @@ body {
   transition: opacity 1.7s;
 }
 
+.bg-gradient-logo {
+  /* background-image: conic-gradient(white 0deg, white 135deg, black 135deg, black 315deg, white 315deg); */
+  background-image: conic-gradient(rgb(30 58 138) 0deg, rgb(30 58 138) 180deg, white 180deg);
+}
 
 /* Animate More Info text */
 /* not working as expected */

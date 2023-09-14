@@ -238,7 +238,7 @@ const Contact = () => {
             <button
               type      = "button"
               onClick   = { sendMessage }
-              className = {`border border-slate-400 w-full hover:bg-blue-800 hover:text-black text-yellow-100 hover:outline hover:outline-1 hover:outline-blue-950 font-bold py-2 px-4 mb-4 mt-3 rounded-full ${(buttonMessage === "Message has been sent successfully!") && "bg-green-700 text-yellow-400 hover:bg-green-700 hover: hover:text-yellow-400"} ${(buttonMessage === "Refresh your screen, please") && "bg-yellow-500 text-red-800 cursor-not-allowed hover:bg-yellow-500 hover:text-red-800 hover:outline-yellow-600"}`}
+              className = {`border border-slate-100 w-full hover:bg-slate-300 hover:text-black text-yellow-100 hover:outline hover:outline-1 hover:outline-blue-950 font-bold py-2 px-4 mb-4 mt-3 rounded-full ${(buttonMessage === "Message has been sent successfully!") && "bg-green-700 text-yellow-400 hover:bg-green-700 hover: hover:text-yellow-400"} ${(buttonMessage === "Refresh your screen, please") && "bg-yellow-500 text-red-800 cursor-not-allowed hover:bg-yellow-500 hover:text-red-800 hover:outline-yellow-600"}`}
               ref       = { refButton }
               disabled  = { buttonMessage === "Sending..." ? true : false }
 
@@ -255,11 +255,11 @@ const Contact = () => {
         </article>
       </div>
 
-      <GoogleReCAPTCHA
+      {/* <GoogleReCAPTCHA
           ref={reCAPTCHARef}
           size='invisible'
           sitekey={RECAPTCHA_SITE_KEY}
-      />
+      /> */}
       
       <div ref = { refFinalMessage }></div>
 
