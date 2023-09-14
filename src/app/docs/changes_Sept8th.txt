@@ -3,9 +3,8 @@ X1.
 An automated full-stack system to web scrape rental availability info from Craigslist, which emails new offers and helps to shortcut the search. 🏠😊
 - To: An automated full-stack system to web scrape rental availability info from Craigslist, which emails new offers to shortcut the rental search. 🏠😊
 
-2. get better pic for clockin.js
-3. convert images to webp
- tk
+X2. get better pic for clockin.js
+X3. convert images to webp
 X4. font-family
 XX5. take out my pic and put it in the "more info"
 X6. 4444ms time for the carousel change
@@ -16,3 +15,12 @@ X9. TK logo displayed on header
   instead of logo image, a TK as text and gradiant
 X10. adding gradient in some components
 X11. tk pic with no bg
+X12. changes on contact form
+X13. no-scrollbar when loading <About>
+
+images webplazy loading on carousel? 
+  see Blueprint.js line 67
+  ?do I need that when images get converted to webp?
+    in dev it breaks the slow scroll to contact at the very first time
+    trying with all images in webp format 
+Xall images in webp format

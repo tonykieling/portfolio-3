@@ -179,7 +179,8 @@ const Contact = () => {
 
 
   return (
-    <section id="contact" ref={contactRef} className="bg-[#424342]">
+    // <section id="contact" ref={contactRef} className="bg-[#424342]">
+    <section id="contact" ref={contactRef} className="bg-slate-800">
       <div className={`${onContac ? "component-visible" : "component-hidden"} flex flex-col items-center w-full`}>
         <h1 className="text-4xl font-bold tracking-widest mt-7 mb-5 text-slate-100">Contact</h1>
         
@@ -188,7 +189,7 @@ const Contact = () => {
 
           <div className="w-11/12 min-[500px]:w-4/5 min-[1200px]:w-3/5">
             <input 
-              className       = {`w-full rounded-md pl-2 mb-2 h-9 bg-[#F3F3F1] outline-none ${inputRedBox.name && "outline outline-red-600 outline-[5px]"}`}
+              className       = {`w-full rounded-md pl-2 mb-2 h-9 bg-slate-700 outline-none ${inputRedBox.name && "outline outline-red-600 outline-[5px]"} focus:bg-slate-300 focus:text-slate-950 font-semibold`}
               placeholder       = "Your name" 
               data-bs-toggle    = "tooltip" 
               data-bs-placement = "top"
@@ -204,7 +205,7 @@ const Contact = () => {
             />
 
             <input 
-              className       = {`w-full rounded-md pl-2 mb-2 h-9 bg-[#F3F3F1] outline-none ${inputRedBox.email && "outline outline-red-600 outline-[5px]"}`}
+              className       = {`w-full rounded-md pl-2 mb-2 h-9 bg-slate-700 outline-none ${inputRedBox.email && "outline outline-red-600 outline-[5px]"} focus:bg-slate-300 focus:text-slate-950 font-semibold`}
               placeholder     = "Your email"
               data-bs-toggle  = "tooltip" 
               title           = "I will never share your email with anyone else."
@@ -220,7 +221,8 @@ const Contact = () => {
             />
 
             <textarea
-              className       = {`w-full rounded-md pl-2 pt-2 mb-2 bg-[#F3F3F1] outline-none ${inputRedBox.message && "outline outline-red-600 outline-[5px]"}`}
+              // className       = {`w-full rounded-md pl-2 pt-2 mb-2 bg-[#F3F3F1] outline-none ${inputRedBox.message && "outline outline-red-600 outline-[5px]"}`}
+              className       = {`w-full rounded-md pl-2 pt-2 mb-0 bg-slate-700 outline-none ${inputRedBox.message && "outline outline-red-600 outline-[5px]"} focus:bg-slate-300 focus:text-slate-950 font-semibold`}
               rows            = "6"
               placeholder     = "Please, leave your message" 
               data-bs-toggle  = "tooltip" 
@@ -255,11 +257,11 @@ const Contact = () => {
         </article>
       </div>
 
-      {/* <GoogleReCAPTCHA
+      <GoogleReCAPTCHA
           ref={reCAPTCHARef}
           size='invisible'
           sitekey={RECAPTCHA_SITE_KEY}
-      /> */}
+      />
       
       <div ref = { refFinalMessage }></div>
 

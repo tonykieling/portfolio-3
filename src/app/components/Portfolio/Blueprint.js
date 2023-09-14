@@ -89,20 +89,20 @@ export default function Blueprint(
                   onClickItem={() => window.open(website, "_blank")}
                   interval="4444"
                 >
-                    { images.map((image, index) => (
-                        <div key={index} style={{textAlign: "center"}}>
-                          <Image
-                            src={`/images/${image}`}
-                            width={800}
-                            height={400}
-                            alt={`${name}'s picture`}
-                            className="rounded-md border-4"
-                            priority={true}
-                            placeholder="blur"
-                            blurDataURL={`/images/${images[0]}`}
-                          />
-                        </div>
-                    ))}
+                  { images.map((image, index) => (
+                      <div key={index} style={{textAlign: "center"}}>
+                        <Image
+                          src={`/images/${image}`}
+                          width={800}
+                          height={400}
+                          alt={`${name}'s picture`}
+                          className="rounded-md border-4"
+                          priority={true}
+                          placeholder="blur"
+                          blurDataURL={`/images/${images[0]}`}
+                        />
+                      </div>
+                  ))}
                 </Carousel>
           }
         </div>

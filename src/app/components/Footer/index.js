@@ -60,9 +60,9 @@ const Footer = () => {
         </li>
       </nav>
 
-      <div className="max-[800px]:mb-36">
+      <div className="max-[800px]:mb-28 mb-16 font-medium">
         <span 
-          className={`justify-center pt-3  text-lg tracking-wide `} 
+          className="justify-center pt-3  text-lg tracking-wide" 
           style={{fontVariant: "small-caps"}}> &nbsp;Tony Kieling
         </span>
           <span>

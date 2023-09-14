@@ -7,7 +7,7 @@
       "It's is an open source project to provide a comprehensive path for tech professionals to work in a team environment."
     ],
     "images": [
-      "web-dev-path.jpg"
+      "web-dev-path.webp"
     ],
     "techStack": "Next.js, React, Mailchimp, SendEmail, GoogleRecaptcha."
   },
@@ -23,10 +23,10 @@
       "Best of all, it's free! 🤑"
     ],
     "images": [
-      "clockin-1.jpg",
-      "clockin-2.jpg",
-      "clockin-3.jpg",
-      "clockin-4.jpg"
+      "clockin-1.webp",
+      "clockin-2.webp",
+      "clockin-3.webp",
+      "clockin-4.webp"
     ],
     "techStack": "React, Express.js, MongoDB, Bootstrap, Redux, JSON Web Token."
   },
@@ -41,10 +41,10 @@
 
     ],
     "images": [
-      "movies-1.jpg",
-      "movies-2.jpg",
-      "movies-3.jpg",
-      "movies-4.jpg"
+      "movies-1.webp",
+      "movies-2.webp",
+      "movies-3.webp",
+      "movies-4.webp"
     ],
     "techStack": "React and CSS."
   },
@@ -58,10 +58,10 @@
       "An automated full-stack system to web scrape rental availability info from Craigslist, which emails targeted offers to shortcut the rental search. 🏠😊"
     ],
     "images": [
-      "home-seeker-1.jpg",
-      "home-seeker-2.jpg",
-      "home-seeker-3.jpg",
-      "home-seeker-4.jpg"
+      "home-seeker-1.webp",
+      "home-seeker-2.webp",
+      "home-seeker-3.webp",
+      "home-seeker-4.webp"
     ],
     "techStack": "Node.js, React, CSS, MongoDB, and Node-Mailer."
   },
@@ -76,10 +76,10 @@
       "Create, Retrieve, Update, and Delete"
     ],
     "images": [
-      "crud-1.jpg",
-      "crud-2.jpg",
-      "crud-3.jpg",
-      "crud-4.jpg"
+      "crud-1.webp",
+      "crud-2.webp",
+      "crud-3.webp",
+      "crud-4.webp"
     ],
     "techStack": "Node, React, MongoDB, CSS."
   },
@@ -93,10 +93,10 @@
       "An e-commerce application that allows managing user profiles and clients to purchase items using PayPal as payment."
     ],
     "images": [
-      "deck-master-1.jpg",
-      "deck-master-2.jpg",
-      "deck-master-3.jpg",
-      "deck-master-4.jpg"
+      "deck-master-1.webp",
+      "deck-master-2.webp",
+      "deck-master-3.webp",
+      "deck-master-4.webp"
     ],
     "techStack": "C# / .Net, JavaScript, Paypal, MS-SQL, and Bootstrap."
   },
@@ -110,7 +110,7 @@
       "A BCIT front-end assignment to build a calculator."
     ],
     "images": [
-      "vue-calculator.jpg"
+      "vue-calculator.webp"
     ],
     "techStack": "Vue and CSS."
   }

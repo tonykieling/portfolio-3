@@ -45,7 +45,7 @@ const About = () => {
 
   return (
     // <section className="bg-[#FFF] flex flex-col" id="about" ref={aboutRef}>
-    <section className="z-10 bg-gradient-to-t from-white to-blue-400 to flex flex-col" id="about" ref={aboutRef}>
+    <section className="z-10 bg-gradient-to-t from-white to-blue-300 to flex flex-col" id="about" ref={aboutRef}>
 
       <div className={`mt-6 ${moreInfoOpen ? "" : "h-[calc((100vh-(var(--header-height)))*0.8)]"} max-[550px]:${moreInfoOpen ? "" : "h-[calc((100vh-(var(--header-height)))*0.85)]"}`}>
         <div className={`flex h-full flex-col justify-start min-[350px]:justify-around min-[700px]:flex-row items-center ${moreInfoOpen ? "min-[700px]:items-start" : ""}`}>
