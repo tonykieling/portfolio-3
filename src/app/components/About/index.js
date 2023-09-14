@@ -9,7 +9,8 @@ import { useContext } from "react";
 
 const oregano = Oregano({ 
   subsets: ['latin'],
-  weight: ["400"]
+  weight: ["400"],
+  display: "swap"
 });
 
 const About = () => {
@@ -17,8 +18,9 @@ const About = () => {
   const [ initialState, setInitialState ] = useState(true);
   const [onAbout, setOnAbout ] = useState(false);
   // const [onAbout, setOnAbout ] = useState(true);
-  const { setCurrentMenu } = useContext(GlobalContext);
+  const { setCurrentMenu, setLoadImages } = useContext(GlobalContext);
   const aboutRef = useRef(null);
+
 
   useEffect(() => {
     const observer = new IntersectionObserver(([entry]) => {
@@ -26,6 +28,16 @@ const About = () => {
       if (initialState) {
         setOnAbout(true);
         setInitialState(false);
+
+                ////////////////////////////////////////////////////////////////////////
+        ///////////////////////////////////////////////////////////////////////
+        ///////////////////////////////////////////////////////////////////////
+        const t = new Date();
+        console.log("BEFORE:::::::::::::: ", t.getTime());
+
+
+        // allow loading images in Portfolio/Blueprint
+        setLoadImages(true);
       }
 
     },

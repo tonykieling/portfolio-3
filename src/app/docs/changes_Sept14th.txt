@@ -1,0 +1,20 @@
+performance & acessibility improvements by pagespeed.web.dev:
+
+Performance (84 for mobile):
+X- Reduce unused JavaScript (reCaptcha)
+  placed a condition (only when <Contact> gets loaded)
+X- Defer offscreen images
+  1. add a verification onItem, meaning the image will be loaded only when it is about to display in the viewport
+  2. if it doesnt work, lets try to have a global flag loadImages, used by <Blueprint>, which is turned in true when onPortfolio is true. 
+  3. another way is to have the above in a useEffect on <About>
+  DID #3, it works in dev, need to check the output in prod
+X- Ensure text remains visible during webfont load
+  Montserrat & Oreagano
+  <About> & layout.js
+  added ```display: "swap"``` when using next/font/google
+
+
+Acessibility (94 for both mobile and Desktop):
+X- use <ul> when <li> (Footer and Header)
+X- h2 instead of h3 in Portfolio/index.js
+

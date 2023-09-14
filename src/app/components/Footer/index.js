@@ -1,10 +1,4 @@
 import Image from "next/image";
-// import { Oregano } from "next/font/google";
-
-// const oregano = Oregano({
-//   subsets: ["latin"],
-//   weight: "400"
-// });
 
 const Footer = () => {
   const getYear = () => {
@@ -20,44 +14,45 @@ const Footer = () => {
       <p className="font-semibold text-lg mb-4">Let&apos;s connect!</p>
 
       <nav className="list-none flex justify-center mb-4">
-        {/* <li className="m-4 border-transparent hover:border hover:border-red-500 p-2 rounded-full"> */}
-        <li className="mx-5 my-2 outline outline-1 outline-slate-400 hover:outline-slate-600 hover:shadow-md hover:shadow-slate-600  p-2 rounded-full">
-          <a 
-            href="mailto:tony.kieling@gmail.com"
-          >
-            <Image
-              src={"/images/gmail.svg"}
-              width={28}
-              height={28}
-              alt="Contact"
-              title="tony.kieling@gmail.com"
-            />
-          </a>
-        </li>
-        
-        <li className="mx-5 my-2 outline outline-1 outline-slate-400 hover:outline-slate-600 hover:shadow-md hover:shadow-slate-600  p-2 rounded-full">
-          <a target="_blank" href="https://www.linkedin.com/in/tony-kieling/" rel="noopener noreferrer">
-            <Image
-              src={"/images/linkedin.svg"}
-              width={28}
-              height={28}
-              alt="LinkedIn"
-              title="LinkedIn"
-            />
-          </a>
-        </li>
+        <ul className="flex">
+          <li className="mx-5 my-2 outline outline-1 outline-slate-400 hover:outline-slate-600 hover:shadow-md hover:shadow-slate-600  p-2 rounded-full">
+            <a 
+              href="mailto:tony.kieling@gmail.com"
+            >
+              <Image
+                src={"/images/gmail.svg"}
+                width={28}
+                height={28}
+                alt="Contact"
+                title="tony.kieling@gmail.com"
+              />
+            </a>
+          </li>
+          
+          <li className="mx-5 my-2 outline outline-1 outline-slate-400 hover:outline-slate-600 hover:shadow-md hover:shadow-slate-600  p-2 rounded-full">
+            <a target="_blank" href="https://www.linkedin.com/in/tony-kieling/" rel="noopener noreferrer">
+              <Image
+                src={"/images/linkedin.svg"}
+                width={28}
+                height={28}
+                alt="LinkedIn"
+                title="LinkedIn"
+              />
+            </a>
+          </li>
 
-        <li className="mx-5 my-2 outline outline-1 outline-slate-400 hover:outline-slate-600 hover:shadow-md hover:shadow-slate-600  p-2 rounded-full">
-          <a target="_blank" href="https://github.com/tonykieling" rel="noopener noreferrer">
-            <Image
-              src={"/images/github.svg"}
-              width={28}
-              height={28}
-              alt="GitHub"
-              title="GitHub"
-            />
-          </a>
-        </li>
+          <li className="mx-5 my-2 outline outline-1 outline-slate-400 hover:outline-slate-600 hover:shadow-md hover:shadow-slate-600  p-2 rounded-full">
+            <a target="_blank" href="https://github.com/tonykieling" rel="noopener noreferrer">
+              <Image
+                src={"/images/github.svg"}
+                width={28}
+                height={28}
+                alt="GitHub"
+                title="GitHub"
+              />
+            </a>
+          </li>
+        </ul>
       </nav>
 
       <div className="max-[800px]:mb-28 mb-16 font-medium">

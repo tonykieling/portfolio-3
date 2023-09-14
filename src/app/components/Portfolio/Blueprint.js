@@ -5,10 +5,14 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
 import { useEffect, useRef, useState } from "react";
 
+import { GlobalContext } from "../context";
+import { useContext } from "react";
+
 export default function Blueprint(
   { props: {name, website, github, description, images, techStack} }
 ) {
 
+  const { loadImages } = useContext(GlobalContext);
   const [ onItem, setOnItem ] = useState(false);
   const [ initialState, setInitialState ] = useState(true);
 
@@ -21,7 +25,7 @@ export default function Blueprint(
         setInitialState(false);
       }
     },
-    { threshold: 0.2 }
+    { threshold: 0.15 }
     );
 
     observer.observe(itemRef.current);
@@ -33,6 +37,15 @@ export default function Blueprint(
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  useEffect(() => {
+    console.log("loadImage::: ", loadImages);
+        ////////////////////////////////////////////////////////////////////////
+        ///////////////////////////////////////////////////////////////////////
+        ///////////////////////////////////////////////////////////////////////
+        const t = new Date();
+        console.log("2. place a activation for download images: ", t.getTime());
+   }, [loadImages]);
 
 
   return (
@@ -64,49 +77,51 @@ export default function Blueprint(
         </a>
       </p>
       
-      <div className="flex justify-center">
-        <div className="w-full min-[800px]:w-3/5 mb-3 hover:cursor-pointer" title="Click to visit the website">
-          { images.length === 1
-              ?
-                <Image
-                  src={`/images/${images[0]}`}
-                  width={800}
-                  height={400}
-                  alt={`${name}'s picture`}
-                  className="rounded-md border-4"
-                  onClick={() => window.open(website, "_blank")}
-                  priority={true}
-                  placeholder="blur"
-                  blurDataURL={`/images/${images[0]}`}
-                />
-              :
-                <Carousel 
-                  autoPlay
-                  showArrows={true}
-                  infiniteLoop 
-                  showThumbs={false} 
-                  showIndicators={false}
-                  onClickItem={() => window.open(website, "_blank")}
-                  interval="4444"
-                >
-                  { images.map((image, index) => (
-                      <div key={index} style={{textAlign: "center"}}>
-                        <Image
-                          src={`/images/${image}`}
-                          width={800}
-                          height={400}
-                          alt={`${name}'s picture`}
-                          className="rounded-md border-4"
-                          priority={true}
-                          placeholder="blur"
-                          blurDataURL={`/images/${images[0]}`}
-                        />
-                      </div>
-                  ))}
-                </Carousel>
-          }
-        </div>
-      </div>
+      { loadImages &&
+          <div className="flex justify-center">
+            <div className="w-full min-[800px]:w-3/5 mb-3 hover:cursor-pointer" title="Click to visit the website">
+              { images.length === 1
+                  ?
+                    <Image
+                      src={`/images/${images[0]}`}
+                      width={800}
+                      height={400}
+                      alt={`${name}'s picture`}
+                      className="rounded-md border-4"
+                      onClick={() => window.open(website, "_blank")}
+                      priority={true}
+                      placeholder="blur"
+                      blurDataURL={`/images/${images[0]}`}
+                    />
+                  :
+                    <Carousel 
+                      autoPlay
+                      showArrows={true}
+                      infiniteLoop 
+                      showThumbs={false} 
+                      showIndicators={false}
+                      onClickItem={() => window.open(website, "_blank")}
+                      interval="4444"
+                    >
+                      { images.map((image, index) => (
+                          <div key={index} style={{textAlign: "center"}}>
+                            <Image
+                              src={`/images/${image}`}
+                              width={800}
+                              height={400}
+                              alt={`${name}'s picture`}
+                              className="rounded-md border-4"
+                              priority={true}
+                              placeholder="blur"
+                              blurDataURL={`/images/${images[0]}`}
+                            />
+                          </div>
+                      ))}
+                    </Carousel>
+              }
+            </div>
+          </div>
+      }
 
       { description.map((desc, index) => <p key={index} className="text-lg"> { desc } </p>)}
 

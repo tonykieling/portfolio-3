@@ -9,6 +9,7 @@ export const GlobalContext = createContext();
 
 export const GlobalProvider = props => {
   const [ currentMenu, setCurrentMenu ] = useState("");
+  const [ loadImages, setLoadImages ] = useState(false);
 
   // useEffect(() => console.log("currentMenu= ", currentMenu), [currentMenu]);
 
@@ -16,7 +17,10 @@ export const GlobalProvider = props => {
     <GlobalContext.Provider
       value={{
         currentMenu,
-        setCurrentMenu
+        setCurrentMenu,
+
+        loadImages,
+        setLoadImages
       }}>
         {props.children}
       </GlobalContext.Provider>

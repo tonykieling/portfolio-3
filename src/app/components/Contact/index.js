@@ -257,11 +257,13 @@ const Contact = () => {
         </article>
       </div>
 
-      <GoogleReCAPTCHA
-          ref={reCAPTCHARef}
-          size='invisible'
-          sitekey={RECAPTCHA_SITE_KEY}
-      />
+      { onContac &&
+          <GoogleReCAPTCHA
+              ref={reCAPTCHARef}
+              size='invisible'
+              sitekey={RECAPTCHA_SITE_KEY}
+          />
+      }
       
       <div ref = { refFinalMessage }></div>
 

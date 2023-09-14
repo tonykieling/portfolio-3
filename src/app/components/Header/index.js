@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import Link from "next/link";
 import { GlobalContext } from "../context";
 import { useContext } from "react";
@@ -26,31 +25,33 @@ const Header = () => {
       </div>
 
       <nav className="list-none text-center font-bold text-xl text--stone-200 max-[450px]:text-lg max-[320px]:text-base ">
-        <li className="px-1 min-[600px]:px-4 inline-block hover:cursor-pointer">
-          <Link 
-            href="#about"
-          >
-            <span className={`pointer-events-none sm:pointer-events-auto ${ currentMenu === "about" ? "text-slate-200 bg-gradient-to-tr from-blue-400 to-blue-800 rounded-md" : "text-[#FFF]"} px-2 min-[600px]:px-4 py-2 hover:bg-gradient-to-bl from-blue-400 to-blue-800 hover:rounded-md`}>
-              About
-            </span>
-          </Link>
-        </li>
+        <ul>
+          <li className="px-1 min-[600px]:px-4 inline-block hover:cursor-pointer">
+            <Link 
+              href="#about"
+            >
+              <span className={`pointer-events-none sm:pointer-events-auto ${ currentMenu === "about" ? "text-slate-200 bg-gradient-to-tr from-blue-400 to-blue-800 rounded-md" : "text-[#FFF]"} px-2 min-[600px]:px-4 py-2 hover:bg-gradient-to-bl from-blue-400 to-blue-800 hover:rounded-md`}>
+                About
+              </span>
+            </Link>
+          </li>
 
-        <li className="px-1 min-[600px]:px-4 inline-block hover:cursor-pointer">
-          <Link href="#portfolio"> 
-            <span className={`pointer-events-none sm:pointer-events-auto ${ currentMenu === "portfolio" ? "text-slate-200 bg-gradient-to-tr from-blue-400 to-blue-800 rounded-md" : "text-[#FFF]"} px-2 min-[600px]:px-4 py-2 hover:bg-gradient-to-bl from-blue-400 to-blue-800 hover:rounded-md`}>
-                Portfolio
-            </span>
-          </Link>
-        </li>
+          <li className="px-1 min-[600px]:px-4 inline-block hover:cursor-pointer">
+            <Link href="#portfolio"> 
+              <span className={`pointer-events-none sm:pointer-events-auto ${ currentMenu === "portfolio" ? "text-slate-200 bg-gradient-to-tr from-blue-400 to-blue-800 rounded-md" : "text-[#FFF]"} px-2 min-[600px]:px-4 py-2 hover:bg-gradient-to-bl from-blue-400 to-blue-800 hover:rounded-md`}>
+                  Portfolio
+              </span>
+            </Link>
+          </li>
 
-        <li className="max-[320px]:px-2 max-[450px]:px-3 max-[600px]:px-4 px-6 inline-block hover:cursor-pointer">
-          <Link href="#contact">
-            <span className={`pointer-events-none sm:pointer-events-auto ${ currentMenu === "contact" ? "text-slate-200 bg-gradient-to-tr from-blue-400 to-blue-800 rounded-md" : "text-[#FFF]"} px-2 min-[600px]:px-4 py-2 hover:bg-gradient-to-bl from-blue-400 to-blue-800 hover:rounded-md`}>
-              Contact
-            </span>
-          </Link>
-        </li>
+          <li className="max-[320px]:px-2 max-[450px]:px-3 max-[600px]:px-4 px-6 inline-block hover:cursor-pointer">
+            <Link href="#contact">
+              <span className={`pointer-events-none sm:pointer-events-auto ${ currentMenu === "contact" ? "text-slate-200 bg-gradient-to-tr from-blue-400 to-blue-800 rounded-md" : "text-[#FFF]"} px-2 min-[600px]:px-4 py-2 hover:bg-gradient-to-bl from-blue-400 to-blue-800 hover:rounded-md`}>
+                Contact
+              </span>
+            </Link>
+          </li>
+        </ul>
       </nav>
     </section>
   )

@@ -1,7 +1,11 @@
 import './globals.css';
 import { Montserrat } from 'next/font/google';
 
-const montserrat = Montserrat({ subsets: ['latin'] });
+const montserrat = Montserrat({ 
+  subsets: ['latin'],
+  display: "swap"
+});
+
 
 export const metadata = {
   title: "Tony Kieling's Website",
