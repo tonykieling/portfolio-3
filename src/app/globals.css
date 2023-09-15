@@ -32,8 +32,8 @@ html {
 body {
 
     height: 100vh;
-    height: 100dvh;
-    height: 100svh;
+    /* height: 100dvh;
+    height: 100svh; */
 
     color: #2a2b2c;
 }
@@ -60,6 +60,7 @@ body {
 .component-visible {
   transition: transform 1s, opacity 2s;
 }
+
 
 /* Animate About items */
 .about-name-hidden {
@@ -93,6 +94,37 @@ body {
 .about-others-visible {
   transition: transform 1.5s, opacity 2s;
 }
+
+@media only screen and (max-width: 800px) {
+  .about-name-hidden {
+    transform: translateY(-5rem);
+  }
+  .about-name-visible {
+    transition: transform 1s, opacity 1s;
+  }
+
+  .about-description-hidden {
+    transform: translateX(-10rem);
+  }
+  .about-description-visible {
+    transition: transform 1s, opacity 1s;
+  }
+
+  .about-picture-hidden {
+    transform: translateX(10rem);
+  }
+  .about-picture-visible {
+    transition: transform 1s, opacity 1s;
+  }
+  
+  .about-others-hidden {
+    transform: translateY(7rem);
+  }
+  .about-others-visible {
+    transition: transform 1s, opacity 1s;
+  }
+}
+
 
 
 /* Animate Portfolio items */

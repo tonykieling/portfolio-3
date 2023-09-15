@@ -6,6 +6,7 @@ import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
 import { GlobalContext } from "../context";
 import { useContext } from "react";
+import TK from "/public/images/tk-no-bg-200.webp";
 
 const oregano = Oregano({ 
   subsets: ['latin'],
@@ -17,7 +18,6 @@ const About = () => {
   const [ moreInfoOpen, setMoreInfoOpen ] = useState(false);
   const [ initialState, setInitialState ] = useState(true);
   const [onAbout, setOnAbout ] = useState(false);
-  // const [onAbout, setOnAbout ] = useState(true);
   const { setCurrentMenu, setLoadImages } = useContext(GlobalContext);
   const aboutRef = useRef(null);
 
@@ -28,13 +28,6 @@ const About = () => {
       if (initialState) {
         setOnAbout(true);
         setInitialState(false);
-
-                ////////////////////////////////////////////////////////////////////////
-        ///////////////////////////////////////////////////////////////////////
-        ///////////////////////////////////////////////////////////////////////
-        const t = new Date();
-        console.log("BEFORE:::::::::::::: ", t.getTime());
-
 
         // allow loading images in Portfolio/Blueprint
         setLoadImages(true);
@@ -108,22 +101,25 @@ const About = () => {
           </div>
 
           
-          <div className={`${onAbout ? "about-picture-visible" : "about-picture-hidden"} h-1/3 w-3/4 flex justify-center order-1 min-[700px]:order-0  min-[700px]:w-2/5 min-[700px]:h-1/2 min-[1200px]:ml-3 min-[900px]:justify-start   ${moreInfoOpen ? "min-[700px]:h-screen min-[700px]:pt-20" : ""}     `} id="about">
+          <div className={`${onAbout ? "about-picture-visible" : "about-picture-hidden"} h-auto w-auto max-[350px]:mx-4 flex justify-center order-1 min-[700px]:order-0  min-[700px]:w-2/5 min-[700px]:h-1/2 min-[1200px]:ml-3 min-[900px]:justify-start   ${moreInfoOpen ? "min-[700px]:h-screen min-[700px]:pt-20" : ""}`} id="about">
             <div 
-              className={`relative flex justify-center w-full h-auto min-[350px]:h-52 ${moreInfoOpen ? "min-[700px]:h-1/3" : ""} min-[900px]:justify-start`}
+              className={`relative flex justify-center w-auto min-[350px]:h-52 ${moreInfoOpen ? "min-[700px]:h-1/3" : ""} min-[900px]:justify-start`}
             >
-              <Image 
-                // src={"/images/tk.webp"}
+              {/* <Image 
                 src={"/images/tk-no-bg.webp"}
                 width={200}
                 height={200}
                 alt="TK's picture"
-                // className="object-center rounded-3xl bg-gradient-to-tr from-blue-50 to-blue-500 shadow-md shadow-slate-700"
-                // className="object-center rounded-3xl bg-gradient-to-tr from-blue-200 to-blue-400 shadow-md shadow-slate-700"
                 className="object-center rounded-3xl shadow-md shadow-slate-700"
-                // className="object-center"
-                // fill={true}
-                // className={`rounded-full w-auto h-auto ${moreInfoOpen ? "h-48 min-[700px]:h-1/4 min-[700px]:w-3/4 min-[1200px]:w-1/2" : ""}`}
+                // className="object-contain rounded-3xl shadow-md shadow-slate-700"
+              /> */}
+              <Image 
+                src={TK}
+                width={200}
+                height={213}
+                alt="TK's picture"
+                className="object-center  rounded-3xl shadow-md shadow-slate-700"
+                // className="object-contain rounded-3xl shadow-md shadow-slate-700"
               />
             </div>
           </div>

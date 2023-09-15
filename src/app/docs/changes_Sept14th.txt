@@ -13,8 +13,16 @@ X- Ensure text remains visible during webfont load
   <About> & layout.js
   added ```display: "swap"``` when using next/font/google
 
-
 Acessibility (94 for both mobile and Desktop):
 X- use <ul> when <li> (Footer and Header)
 X- h2 instead of h3 in Portfolio/index.js
 
+-----------------------------------------------------------------------------------------------
+Perfomance
+- Reduce <About> transition time for mobile
+
+Best Practices
+XImages resizing proportionally
+
++ tk-no-bg-200 is a bit smaller than the previous pic
+some clean up

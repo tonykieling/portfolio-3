@@ -34,7 +34,6 @@ const Contact = () => {
   });
   
   const [ onContac, setOnContact ] = useState(false);
-  // const [ onContac, setOnContact ] = useState(true);
   const [ initialState, setInitialState ] = useState(true);
 
   useEffect(() => {
@@ -179,7 +178,6 @@ const Contact = () => {
 
 
   return (
-    // <section id="contact" ref={contactRef} className="bg-[#424342]">
     <section id="contact" ref={contactRef} className="bg-slate-800">
       <div className={`${onContac ? "component-visible" : "component-hidden"} flex flex-col items-center w-full`}>
         <h1 className="text-4xl font-bold tracking-widest mt-7 mb-5 text-slate-100">Contact</h1>
@@ -221,7 +219,6 @@ const Contact = () => {
             />
 
             <textarea
-              // className       = {`w-full rounded-md pl-2 pt-2 mb-2 bg-[#F3F3F1] outline-none ${inputRedBox.message && "outline outline-red-600 outline-[5px]"}`}
               className       = {`w-full rounded-md pl-2 pt-2 mb-0 bg-slate-700 outline-none ${inputRedBox.message && "outline outline-red-600 outline-[5px]"} focus:bg-slate-300 focus:text-slate-950 font-semibold`}
               rows            = "6"
               placeholder     = "Please, leave your message" 
