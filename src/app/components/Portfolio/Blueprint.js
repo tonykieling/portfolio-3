@@ -38,20 +38,10 @@ export default function Blueprint(
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  useEffect(() => {
-    console.log("loadImage::: ", loadImages);
-        ////////////////////////////////////////////////////////////////////////
-        ///////////////////////////////////////////////////////////////////////
-        ///////////////////////////////////////////////////////////////////////
-        const t = new Date();
-        console.log("2. place a activation for download images: ", t.getTime());
-   }, [loadImages]);
-
 
   return (
     <article className={`relative z-0 flex flex-col p-7 pb-19 my-6 max-[600px]:my-8 max-[800px]:mx-1 min-[800px]:my-8 rounded-md bg-slate-300 ${onItem ? "portfolio-item-visible" : "portfolio-item-hidden"}`} ref={itemRef}>
 
-      {/* <p className="flex justify-center text-3xl font-bold mb-5"> */}
       <p className="flex text-3xl font-bold mb-5">
         <a target="_blank" rel="noopener noreferrer"
           href={website} 
