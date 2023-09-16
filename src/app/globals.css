@@ -32,8 +32,8 @@ html {
 body {
 
     height: 100vh;
-    /* height: 100dvh;
-    height: 100svh; */
+    height: 100dvh;
+    /* height: 100svh; */
 
     color: #2a2b2c;
 }
@@ -100,28 +100,28 @@ body {
     transform: translateY(-5rem);
   }
   .about-name-visible {
-    transition: transform 1s, opacity 1s;
+    transition: transform 0.7s, opacity 0.7s;
   }
 
   .about-description-hidden {
-    transform: translateX(-10rem);
+    transform: translateX(-7rem);
   }
   .about-description-visible {
-    transition: transform 1s, opacity 1s;
+    transition: transform 0.7s, opacity 0.7s;
   }
 
   .about-picture-hidden {
-    transform: translateX(10rem);
+    transform: translateX(7rem);
   }
   .about-picture-visible {
-    transition: transform 1s, opacity 1s;
+    transition: transform 0.7s, opacity 0.7s;
   }
   
   .about-others-hidden {
     transform: translateY(7rem);
   }
   .about-others-visible {
-    transition: transform 1s, opacity 1s;
+    transition: transform 0.7s, opacity 0.7s;
   }
 }
 

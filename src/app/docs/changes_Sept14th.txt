@@ -7,7 +7,7 @@ X- Defer offscreen images
   1. add a verification onItem, meaning the image will be loaded only when it is about to display in the viewport
   2. if it doesnt work, lets try to have a global flag loadImages, used by <Blueprint>, which is turned in true when onPortfolio is true. 
   3. another way is to have the above in a useEffect on <About>
-  DID #3, it works in dev, need to check the output in prod
+  I did #3, it works in dev, need to check the output in prod
 X- Ensure text remains visible during webfont load
   Montserrat & Oreagano
   <About> & layout.js
@@ -26,3 +26,13 @@ XImages resizing proportionally
 
 + tk-no-bg-200 is a bit smaller than the previous pic
 some clean up
+
+-----------------------------------------------------------------------------------------------
+Xenable dhv - tryed only dvh, no svh
+Xload Github and Website images (<Blueprint>) only when loadImages is true
+-no priority for images in Blueprint - if no, it affects the going to Contact, so has to keep priority
+Xchanged TK's pic to be in /images and set priority to it - no I believe importing can be better, but not 100% sure so far
+Xpriority to arrow down and also importing it
+Xresize TK's pic 200 X 208 - the software I've been using does not resize for this particular size, only at 200X213 proportion
+  because importing pic, so did not define width and height and seems to be okay
+add google analytics

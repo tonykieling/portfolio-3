@@ -6,7 +6,8 @@ import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
 import { GlobalContext } from "../context";
 import { useContext } from "react";
-import TK from "/public/images/tk-no-bg-200.webp";
+import TK from "/public/images/tk-no-bg-200_X_213.webp";
+import ArrowDown from "/public/images/arrow-down.svg";
 
 const oregano = Oregano({ 
   subsets: ['latin'],
@@ -29,7 +30,7 @@ const About = () => {
         setOnAbout(true);
         setInitialState(false);
 
-        // allow loading images in Portfolio/Blueprint
+        // enables loading images in Portfolio/Blueprint
         setLoadImages(true);
       }
 
@@ -49,7 +50,6 @@ const About = () => {
 
 
   return (
-    // <section className="bg-[#FFF] flex flex-col" id="about" ref={aboutRef}>
     <section className="z-10 bg-gradient-to-t from-white to-blue-300 to flex flex-col" id="about" ref={aboutRef}>
 
       <div className={`mt-6 ${moreInfoOpen ? "" : "h-[calc((100vh-(var(--header-height)))*0.8)]"} max-[550px]:${moreInfoOpen ? "" : "h-[calc((100vh-(var(--header-height)))*0.85)]"}`}>
@@ -106,17 +106,18 @@ const About = () => {
               className={`relative flex justify-center w-auto min-[350px]:h-52 ${moreInfoOpen ? "min-[700px]:h-1/3" : ""} min-[900px]:justify-start`}
             >
               {/* <Image 
-                src={"/images/tk-no-bg.webp"}
+                src={"/images/tk-no-bg-200_X_213.webp"}
                 width={200}
-                height={200}
+                height={213}
+                priority="eager"
                 alt="TK's picture"
                 className="object-center rounded-3xl shadow-md shadow-slate-700"
-                // className="object-contain rounded-3xl shadow-md shadow-slate-700"
               /> */}
               <Image 
                 src={TK}
-                width={200}
-                height={213}
+                // width={200}
+                // height={208}
+                priority="eager"
                 alt="TK's picture"
                 className="object-center  rounded-3xl shadow-md shadow-slate-700"
                 // className="object-contain rounded-3xl shadow-md shadow-slate-700"
@@ -134,10 +135,12 @@ const About = () => {
             href={"#portfolio"}
           >
             <Image 
-              src={"/images/arrow-down.svg"}
+              // src={"/images/arrow-down.svg"}
+              src={ArrowDown}
               width={60}
               height={60}
               alt="arrow down"
+              priority="eager"
               title="Keep going for more"
               className={"pointer-events-none sm:pointer-events-auto hover:border hover:border-gray-900 rounded-full"}
             />
