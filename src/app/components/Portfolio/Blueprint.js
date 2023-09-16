@@ -47,24 +47,29 @@ export default function Blueprint(
           href={website} 
           className="mr-4 hover:text-blue-700 hover:underline"
         > { name } </a>
-        <a target="_blank" href={website} rel="noopener noreferrer" className="mr-3 flex items-center">
-          <Image
-            src={"/images/internet.svg"}
-            width={28}
-            height={28}
-            alt={ name }
-            title="Website"
-          />
-        </a>
-        <a target="_blank" href={github} rel="noopener noreferrer" className="mr-3 flex items-center">
-          <Image
-            src={"/images/github.svg"}
-            width={28}
-            height={28}
-            alt="GitHub"
-            title="GitHub"
-          />
-        </a>
+
+        { loadImages &&
+            <>
+              <a target="_blank" href={website} rel="noopener noreferrer" className="mr-3 flex items-center">
+                <Image
+                  src={"/images/internet.svg"}
+                  width={28}
+                  height={28}
+                  alt={ name }
+                  title="Website"
+                />
+              </a>
+              <a target="_blank" href={github} rel="noopener noreferrer" className="mr-3 flex items-center">
+                <Image
+                  src={"/images/github.svg"}
+                  width={28}
+                  height={28}
+                  alt="GitHub"
+                  title="GitHub"
+                />
+              </a>
+            </>
+        }
       </p>
       
       { loadImages &&
