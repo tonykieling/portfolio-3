@@ -1,5 +1,6 @@
 import './globals.css';
 import { Montserrat } from 'next/font/google';
+import { Analytics } from '@vercel/analytics/react';
 
 const montserrat = Montserrat({ 
   subsets: ['latin'],
@@ -15,7 +16,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`scroll-smooth ${montserrat.className} no-scrollbar`}>
-      <body suppressHydrationWarning={true} >{children}</body>
+      <body suppressHydrationWarning={true} >
+        { children }
+        <Analytics />
+      </body>
     </html>
   )
 };

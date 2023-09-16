@@ -1,10 +1,16 @@
 "use client";
 import Link from "next/link";
 import { GlobalContext } from "../context";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 
 const Header = () => {
   const { currentMenu } = useContext(GlobalContext);
+  const { setLoadImages } = useContext(GlobalContext);
+
+  useEffect(() => {
+    setLoadImages(true);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <section className="sticky z-50  top-0   pl-1 flex items-center justify-center max-[500px]:justify-between py-5 shadow-md shadow-slate-600 bg-gradient-to-r from-blue-600 min-[700px]:from-purple-700 min-[700px]:to-blue-900 to-blue-900" id="header">
