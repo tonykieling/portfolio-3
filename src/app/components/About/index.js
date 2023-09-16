@@ -6,7 +6,7 @@ import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
 import { GlobalContext } from "../context";
 import { useContext } from "react";
-import TK from "/public/images/tk-no-bg-200_X_213.webp";
+import TK from "/public/images/tk-no-bg-350_X_372.webp";
 import ArrowDown from "/public/images/arrow-down.svg";
 
 const oregano = Oregano({ 
@@ -29,9 +29,6 @@ const About = () => {
       if (initialState) {
         setOnAbout(true);
         setInitialState(false);
-
-        // enables loading images in Portfolio/Blueprint
-        setLoadImages(true);
       }
 
     },
@@ -115,9 +112,9 @@ const About = () => {
               /> */}
               <Image 
                 src={TK}
-                // width={200}
-                // height={208}
-                priority="eager"
+                width={200}
+                height={208}
+                priority={true}
                 alt="TK's picture"
                 className="object-center  rounded-3xl shadow-md shadow-slate-700"
                 // className="object-contain rounded-3xl shadow-md shadow-slate-700"
@@ -135,12 +132,11 @@ const About = () => {
             href={"#portfolio"}
           >
             <Image 
-              // src={"/images/arrow-down.svg"}
               src={ArrowDown}
               width={60}
               height={60}
               alt="arrow down"
-              priority="eager"
+              priority={true}
               title="Keep going for more"
               className={"pointer-events-none sm:pointer-events-auto hover:border hover:border-gray-900 rounded-full"}
             />

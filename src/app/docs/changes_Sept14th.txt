@@ -35,4 +35,9 @@ Xchanged TK's pic to be in /images and set priority to it - no I believe importi
 Xpriority to arrow down and also importing it
 Xresize TK's pic 200 X 208 - the software I've been using does not resize for this particular size, only at 200X213 proportion
   because importing pic, so did not define width and height and seems to be okay
-add google analytics
+
+-----------------------------------------------------------------------------------------------
+Xplaced setLoadImages on <Header> instead of <About>
+Xchanged TK's pic size to a bigger one - more image quality
+Xsmall changing on the mobile css <About> animation
+Xadded Vercel analytics
