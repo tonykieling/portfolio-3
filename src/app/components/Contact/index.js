@@ -182,7 +182,7 @@ const Contact = () => {
       <div className={`${onContac ? "component-visible" : "component-hidden"} flex flex-col items-center w-full`}>
         <h1 className="text-4xl font-bold tracking-widest mt-7 mb-5 text-slate-100">Contact</h1>
         
-        <article className="flex flex-col items-center mb-5">
+        <article className="flex flex-col items-center mb-5 w-11/12 min-[600px]:w-2/3 min-[1000px]:w-1/2">
           <h2 className="text-lg my-3 font-semibold text-slate-100">Feel free to reach out.</h2>
 
           <div className="w-11/12 min-[500px]:w-4/5 min-[1200px]:w-3/5">
@@ -254,13 +254,13 @@ const Contact = () => {
         </article>
       </div>
 
-      {/* { onContac &&
+      { onContac &&
           <GoogleReCAPTCHA
               ref={reCAPTCHARef}
               size='invisible'
               sitekey={RECAPTCHA_SITE_KEY}
           />
-      } */}
+      }
       
       <div ref = { refFinalMessage }></div>
 
