@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
     <html lang="en" className={`scroll-smooth ${montserrat.className} no-scrollbar`}>
       <body suppressHydrationWarning={true} >
         { children }
-        <Analytics />
+        {/* <Analytics /> */}
       </body>
     </html>
   )

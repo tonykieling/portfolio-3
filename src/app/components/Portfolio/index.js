@@ -37,7 +37,7 @@ const Portfolio = () => {
 
 
   return (
-    <section className="bg-slate-300" id="portfolio" ref={portfolioRef}>
+    <section className="bg-slate-300 z-10" id="portfolio" ref={portfolioRef}>
       
       <div 
         className={`${onPortfolio ? "component-visible" : "component-hidden"} flex flex-col items-center w-full`}
