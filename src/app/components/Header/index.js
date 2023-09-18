@@ -4,8 +4,7 @@ import { GlobalContext } from "../context";
 import { useContext, useEffect } from "react";
 
 const Header = () => {
-  const { currentMenu } = useContext(GlobalContext);
-  const { setLoadImages } = useContext(GlobalContext);
+  const { currentMenu, setLoadImages } = useContext(GlobalContext);
 
   useEffect(() => {
     setLoadImages(true);
@@ -16,7 +15,8 @@ const Header = () => {
     <section className="sticky z-50  top-0   pl-1 flex items-center justify-center max-[500px]:justify-between py-5 shadow-md shadow-slate-600 bg-gradient-to-r from-blue-600 min-[700px]:from-purple-700 min-[700px]:to-blue-900 to-blue-900" id="header">
       
       {/* TK's logo */}
-      <div className="min-[501px]:absolute min-[500px]:top-0 left-4  h-full">
+      <div className="min-[501px]:absolute min-[500px]:top-0 min-[500px]:left-4 pl-3 max-[360px]:pl-0  h-full">
+      {/* <div className="pl-3 h-full"> */}
         <div className="h-full flex items-center justify-center">
           <a href="/">
             <span className="bg-gradient-to-tr from-blue-100 to-blue-500 rounded-full p-2 font-bold text-2xl hover:outline hover:outline-white pointer-events-none sm:pointer-events-auto" title="TK's Home Page">

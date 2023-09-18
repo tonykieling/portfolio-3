@@ -19,7 +19,7 @@ const About = () => {
   const [ moreInfoOpen, setMoreInfoOpen ] = useState(false);
   const [ initialState, setInitialState ] = useState(true);
   const [onAbout, setOnAbout ] = useState(false);
-  const { setCurrentMenu, setLoadImages } = useContext(GlobalContext);
+  const { setCurrentMenu } = useContext(GlobalContext);
   const aboutRef = useRef(null);
 
 
@@ -49,7 +49,7 @@ const About = () => {
   return (
     <section className="z-10 bg-gradient-to-t from-white to-blue-300 to flex flex-col" id="about" ref={aboutRef}>
 
-      <div className={`mt-6 ${moreInfoOpen ? "" : "h-[calc((100vh-(var(--header-height)))*0.8)]"} max-[550px]:${moreInfoOpen ? "" : "h-[calc((100vh-(var(--header-height)))*0.85)]"}`}>
+      <div className={`mt-6 ${moreInfoOpen ? "" : "h-[calc((100vh-(var(--header-height)))*0.8)]"} max-[550px]:${moreInfoOpen ? "" : "h-[calc((100vh-(var(--header-height)))*0.85)]"} max-[310px]:h-full`}>
         <div className={`flex h-full flex-col justify-start min-[350px]:justify-around min-[700px]:flex-row items-center ${moreInfoOpen ? "min-[700px]:items-start" : ""}`}>
           <div className="w-11/12 h-full  flex flex-col items-center justify-center min-[700px]:ml-2 max-[699px]:order-3 min-[700px]:w-3/5 max-[700px]:h-1/2 max-[700px]:justify-start min-[900px]:ml-20 min-[1000px]:ml-36">
             <p className={`${oregano.className} ${onAbout ? "about-name-visible" : "about-name-hidden"} max-[700px]:mt-1 font-extrabold tracking-widest text-5xl pb-4 text-center min-[700px]:text-7xl min-[700px]:mb-5 text-slate-900     text-transparent bg-clip-text bg-gradient-to-t from-blue-700 to-black`} id="moreinfo">

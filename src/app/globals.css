@@ -22,18 +22,30 @@
 }
 
 :root {
-  --header-height: 67px;
+  --header-fewer342: 96px;
+  --header-500: 72px;
+  --header-height: 68px;
 }
 
 html {
-  scroll-padding: var(--header-height);
+  scroll-padding: var(--header-fewer342);
+}
+@media only screen and (min-width: 343px) and (max-width: 500px) {
+  html{
+    scroll-padding: var(--header-500);
+  }
+}
+@media only screen and (min-width: 501px) {
+  html{
+    scroll-padding: var(--header-height);
+  }
 }
 
 body {
 
     height: 100vh;
     height: 100dvh;
-    /* height: 100svh; */
+    height: 100svh;
 
     color: #2a2b2c;
 }
