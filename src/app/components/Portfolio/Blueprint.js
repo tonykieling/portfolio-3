@@ -72,6 +72,7 @@ export default function Blueprint(
         }
       </p>
       
+      {/* some tests claim that setting loadImages as below it is more performant for lighthouse purposes */}
       { loadImages &&
           <div className="flex justify-center">
             <div className="w-full min-[800px]:w-3/5 mb-3 hover:cursor-pointer" title="Click to visit the website">

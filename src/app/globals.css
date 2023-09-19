@@ -9,32 +9,38 @@
 }
 
 html {
+  --header-height: var(var(--header-fewer240));
   scroll-padding: var(--header-fewer240);
   overflow-x: hidden;
-  height: 100vh;
+  /* height: 100vh;
   height: 100dvh;
-  height: 100svh;
+  height: 100svh; */
+  box-sizing: content-box;
 }
 @media only screen and (min-width: 240px) and (max-width: 333px) {
   html{
+    --header-height: var(var(--header-fewer333));
     scroll-padding: var(--header-fewer333);
   }
 }
 @media only screen and (min-width: 334px) {
   html{
+    --header-height: var(var(--header-height));
     scroll-padding: var(--header-height);
   }
 }
 
 body {
-    height: 100vh;
+  /* min-height: 100vh;
+  min-height: 100dvh; */
+    /* height: 100vh;
     height: 100dvh;
-    height: 100svh;
-    /* max-height: 100dvh; */
+    height: 100svh; */
+    /* max-height: 100dvh;
+    max-height: 100svh; */
 
     color: #2a2b2c;
 }
-
 
 /* Carousel buttons */
 .carousel .control-next.control-arrow:before {
@@ -60,65 +66,64 @@ body {
 
 
 /* Animate About items */
-.about-name-hidden {
+/* .about-name-hidden {
   opacity: 0;
-  transform: translateY(-7rem);
 }
 .about-name-visible {
-  transition: transform 1.5s, opacity 2s;
+  transition: opacity 1s;
 }
 
 .about-description-hidden {
   opacity: 0;
-  transform: translateX(-27rem);
 }
 .about-description-visible {
-  transition: transform 1.5s, opacity 2s;
+  transition: opacity 1s;
 }
 
 .about-picture-hidden {
   opacity: 0;
-  transform: translateX(27rem);
 }
 .about-picture-visible {
-  transition: transform 1.5s, opacity 2s;
+  transition: opacity 1s;
 }
 
 .about-others-hidden {
   opacity: 0;
-  transform: translateY(22rem);
 }
 .about-others-visible {
-  transition: transform 1.5s, opacity 2s;
-}
+  transition: opacity 1s;
+} */
 
-@media only screen and (max-width: 800px) {
+@media only screen and (min-width: 800px) {
   .about-name-hidden {
+    opacity: 0;
     transform: translateY(-5rem);
   }
   .about-name-visible {
-    transition: transform 1s, opacity 1s;
+    transition: transform 1.5s, opacity 2s;
   }
 
   .about-description-hidden {
-    transform: translateX(-7rem);
+    opacity: 0;
+    transform: translateX(-12rem);
   }
   .about-description-visible {
-    transition: transform 1s, opacity 1s;
+    transition: transform 1.5s, opacity 2s;
   }
 
   .about-picture-hidden {
-    transform: translateX(7rem);
+    opacity: 0;
+    transform: translateX(10rem);
   }
   .about-picture-visible {
-    transition: transform 1s, opacity 1s;
+    transition: transform 1.5s, opacity 1s;
   }
   
   .about-others-hidden {
-    transform: translateY(7rem);
+    transform: translateY(15rem);
   }
   .about-others-visible {
-    transition: transform 1s, opacity 1s;
+    transition: transform 1.5s, opacity 1s;
   }
 }
 

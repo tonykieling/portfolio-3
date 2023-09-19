@@ -16,7 +16,6 @@ const Header = () => {
       className="sticky z-50  top-0   pl-1 flex items-center justify-between min-[800px]:pr-20 min-[1000px]:pr-64 min-[1300px]:pr-96 py-5 shadow-md shadow-slate-600 bg-gradient-to-r from-blue-600 min-[700px]:from-purple-700 min-[700px]:to-blue-900 to-blue-900"
       id="header"
     >
-      
       {/* TK's logo */}
       <div className="pl-1 min-[390px]:pl-2 min-[700px]:pl-4">
         <div className="h-full flex items-center justify-center">
@@ -33,9 +32,7 @@ const Header = () => {
       <nav className="list-none text-center font-bold text-xl text--stone-200 max-[450px]:text-lg max-[370px]:text-base ">
         <ul>
           <li className="px-1 min-[600px]:px-4 inline-block hover:cursor-pointer">
-            <Link 
-              href="#about"
-            >
+            <Link href="#about" >
               <span className={`pointer-events-none sm:pointer-events-auto ${ currentMenu === "about" ? "text-slate-200 bg-gradient-to-tr from-blue-400 to-blue-800 rounded-md" : "text-[#FFF]"} px-2 min-[600px]:px-4 py-2 hover:bg-gradient-to-bl from-blue-400 to-blue-800 hover:rounded-md`}>
                 About
               </span>
