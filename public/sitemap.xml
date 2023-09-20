@@ -1,0 +1,26 @@
+<!-- public/sitemap.xml -->
+<xml version="1.0" encoding="UTF-8">
+  <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+      <loc>http://tkwebdev.ca</loc>
+    </url>
+    <url>
+      <loc>https://clockin.tkwebdev.ca</loc>
+    </url>
+    <url>
+      <loc>https://tonykielingbcit.github.io/react-project</loc>
+    </url>
+    <url>
+      <loc>https://home-seeker.tkwebdev.ca</loc>
+    </url>
+    <url>
+      <loc>https://crud.tkwebdev.ca</loc>
+    </url>
+    <url>
+      <loc>https://tkwebsec04.azurewebsites.net</loc>
+    </url>
+    <url>
+      <loc>https://tonykielingbcit.github.io/vue-assignment</loc>
+    </url>
+  </urlset>
+</xml>
