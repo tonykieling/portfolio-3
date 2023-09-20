@@ -1,26 +1,46 @@
-<!-- public/sitemap.xml -->
-<xml version="1.0" encoding="UTF-8">
-  <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    <url>
-      <loc>http://tkwebdev.ca</loc>
-    </url>
-    <url>
-      <loc>https://clockin.tkwebdev.ca</loc>
-    </url>
-    <url>
-      <loc>https://tonykielingbcit.github.io/react-project</loc>
-    </url>
-    <url>
-      <loc>https://home-seeker.tkwebdev.ca</loc>
-    </url>
-    <url>
-      <loc>https://crud.tkwebdev.ca</loc>
-    </url>
-    <url>
-      <loc>https://tkwebsec04.azurewebsites.net</loc>
-    </url>
-    <url>
-      <loc>https://tonykielingbcit.github.io/vue-assignment</loc>
-    </url>
-  </urlset>
-</xml>
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://tkwebdev.ca/</loc>
+  <lastmod>2023-09-20T19:00:26+00:00</lastmod>
+</url>
+
+<url>
+  <loc>https://clockin.tkwebdev.ca</loc>
+  <lastmod>2023-09-20T19:00:26+00:00</lastmod>
+</url>
+
+<url>
+  <loc>https://tonykielingbcit.github.io/react-project</loc>
+  <lastmod>2023-09-20T19:00:26+00:00</lastmod>
+</url>
+
+<url>
+  <loc>https://home-seeker.tkwebdev.ca</loc>
+  <lastmod>2023-09-20T19:00:26+00:00</lastmod>
+</url>
+
+<url>
+  <loc>https://crud.tkwebdev.ca</loc>
+  <lastmod>2023-09-20T19:00:26+00:00</lastmod>
+</url>
+
+<url>
+  <loc>https://tkwebsec04.azurewebsites.net</loc>
+  <lastmod>2023-09-20T19:00:26+00:00</lastmod>
+</url>
+
+<url>
+  <loc>https://tonykielingbcit.github.io/vue-assignment</loc>
+  <lastmod>2023-09-20T19:00:26+00:00</lastmod>
+</url>
+
+
+</urlset>
