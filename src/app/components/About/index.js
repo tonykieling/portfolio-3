@@ -20,8 +20,9 @@ const About = () => {
   const [ initialState, setInitialState ] = useState(true);
   const [onAbout, setOnAbout ] = useState(false);
   // const [onAbout, setOnAbout ] = useState(window.innerWidth < 800 ? true : false);
-  const { setCurrentMenu } = useContext(GlobalContext);
+  const { setCurrentMenu, setShowWaves } = useContext(GlobalContext);
   const aboutRef = useRef(null);
+  const wavesRef = useRef(null);
 
 
   useEffect(() => {
@@ -47,8 +48,40 @@ const About = () => {
   }, []);
 
 
+  // observer for waves
+  useEffect(() => {
+    const observer = new IntersectionObserver(([entry]) => {
+      setShowWaves(entry.isIntersecting ? true : false);
+    },
+    { rootMargin: "-70px" }
+    );
+
+    observer.observe(wavesRef.current);
+    
+    return() => {
+      observer.disconnect();
+      if (wavesRef) observer.unobserve(wavesRef);
+    }
+    
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+
   return (
-    <section className="z-10 bg-gradient-to-t from-white to-blue-300 to flex flex-col" id="about" ref={aboutRef}>
+    <section className="z-10 bg-gradient-to-t from-blue-100 to-blue-400 to flex flex-col" id="about" ref={aboutRef}>
+
+      {/* waves */}
+      <div className="custom-shape-divider-top" ref={wavesRef}>
+        <svg dataname="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+          <defs>
+            <linearGradient id="gradient-fill" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" className="waves-color-zero" />
+              <stop offset="100%" className="waves-color-hundred" />
+            </linearGradient>
+          </defs>
+          <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" className="shape-fill"></path>
+        </svg>
+      </div>
 
       {/* <div className={`pt-6 ${moreInfoOpen ? "" : "h-[calc((100vh-(var(--header-height)))*0.8)] max-[550px]:h-[calc((h-[100dvh]-
         (var(--header-height)))*0.9)]"} max-[310px]:h-full`}> */}

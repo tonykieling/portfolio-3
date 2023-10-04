@@ -158,3 +158,48 @@ body {
   animation: displaying 1.5s;
   display: block;
 } */
+
+
+/* About page's wave */
+.custom-shape-divider-top {
+  position: absolute;
+  top: calc(var(--header-height) - 1px);
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+  z-index: -1;
+}
+.custom-shape-divider-top svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 120px;
+}
+.custom-shape-divider-top .shape-fill {
+  fill: url(#gradient-fill)
+}
+.waves-color-zero {
+  stop-color: #1e3a8a;
+  stop-opacity: 1;
+}
+.waves-color-hundred {
+  stop-color: #2563eb;
+  stop-opacity: 1;
+}
+@media only screen and (min-width: 700px) {
+  .waves-color-hundred {
+    stop-color: #7e22ce;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .custom-shape-divider-top svg {
+    height: 80px;
+  }
+}
+@media only screen and (max-width: 280px) {
+  .custom-shape-divider-top {
+    display: none;
+  }  
+}

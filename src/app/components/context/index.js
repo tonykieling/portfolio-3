@@ -10,6 +10,7 @@ export const GlobalContext = createContext();
 export const GlobalProvider = props => {
   const [ currentMenu, setCurrentMenu ] = useState("");
   const [ loadImages, setLoadImages ] = useState(false);
+  const [ showWaves, setShowWaves ] = useState(true);
 
 
   return (
@@ -19,7 +20,10 @@ export const GlobalProvider = props => {
         setCurrentMenu,
 
         loadImages,
-        setLoadImages
+        setLoadImages,
+
+        showWaves,
+        setShowWaves
       }}>
         {props.children}
       </GlobalContext.Provider>
