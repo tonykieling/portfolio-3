@@ -10,7 +10,8 @@ import { useState, useLayoutEffect } from 'react';
 export default function Home() {
   const [ screenNotSupported, setScreenNotSupported ] = useState(false);
   useLayoutEffect(() => {
-    const badScreen = ((window.innerHeight / window.innerWidth) < 0.60);
+    const height = window.innerHeight;
+    const badScreen = (height < 600 && ((height / window.innerWidth) < 0.60));
     setScreenNotSupported(badScreen);
   console.log("screenNotSupported=== ", badScreen, window.innerHeight / window.innerWidth);
   }, []);
