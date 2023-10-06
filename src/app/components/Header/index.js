@@ -1,21 +1,17 @@
 "use client";
 import Link from "next/link";
 import { GlobalContext } from "../context";
-import { useContext, useEffect } from "react";
+import { useContext, useLayoutEffect } from "react";
 
 const Header = () => {
   const { currentMenu, setLoadImages, showWaves } = useContext(GlobalContext);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     setLoadImages(true);
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
-    // <section 
-    //   className="sticky z-50  top-0   pl-1 flex items-center justify-between min-[800px]:pr-20 min-[1000px]:pr-64 min-[1300px]:pr-96 py-5 shadow-md shadow-slate-600 bg-gradient-to-r from-blue-600 min-[700px]:from-purple-700 min-[700px]:to-blue-900 to-blue-900"
-    //   id="header"
-    // >
     <section 
       className={`sticky z-50  top-0   pl-1 flex items-center justify-between min-[800px]:pr-20 min-[1000px]:pr-64 min-[1300px]:pr-96 py-5 bg-gradient-to-r from-blue-600 min-[700px]:from-purple-700 min-[700px]:to-blue-900 to-blue-900 ${!showWaves && "shadow-lg shadow-slate-600"}`}
       id="header"

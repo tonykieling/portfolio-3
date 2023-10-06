@@ -51,7 +51,6 @@ const Contact = () => {
     observer.observe(contactRef.current);
 
     return() => {
-      // if (contactRef?.current) observer.unobserve(contactRef);
       observer.disconnect();
     }
     

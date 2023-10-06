@@ -31,14 +31,6 @@ html {
 }
 
 body {
-  /* min-height: 100vh;
-  min-height: 100dvh; */
-    /* height: 100vh;
-    height: 100dvh;
-    height: 100svh; */
-    /* max-height: 100dvh;
-    max-height: 100svh; */
-
     color: #2a2b2c;
 }
 
@@ -63,36 +55,6 @@ body {
 .component-visible {
   transition: transform 1s, opacity 2s;
 }
-
-
-/* Animate About items */
-/* .about-name-hidden {
-  opacity: 0;
-}
-.about-name-visible {
-  transition: opacity 1s;
-}
-
-.about-description-hidden {
-  opacity: 0;
-}
-.about-description-visible {
-  transition: opacity 1s;
-}
-
-.about-picture-hidden {
-  opacity: 0;
-}
-.about-picture-visible {
-  transition: opacity 1s;
-}
-
-.about-others-hidden {
-  opacity: 0;
-}
-.about-others-visible {
-  transition: opacity 1s;
-} */
 
 @media only screen and (min-width: 800px) {
   .about-name-hidden {
@@ -128,7 +90,6 @@ body {
 }
 
 
-
 /* Animate Portfolio items */
 .portfolio-item-hidden {
   opacity: 0;
@@ -136,28 +97,6 @@ body {
 .portfolio-item-visible {
   transition: opacity 1.7s;
 }
-
-
-/* Animate More Info text */
-/* not working as expected */
-/* @keyframes hidden {
-  from { display: block; }
-  to { opacity: 0; }
-}
-
-@keyframes displaying {
-  from { display: none; }
-  to { opacity: 1; }
-}
-
-.more-info-hidden {
-  animation: hidden 1.5s;
-  display: none;
-}
-.more-info-visible {
-  animation: displaying 1.5s;
-  display: block;
-} */
 
 
 /* About page's wave */

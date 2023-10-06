@@ -19,7 +19,6 @@ const About = () => {
   const [ moreInfoOpen, setMoreInfoOpen ] = useState(false);
   const [ initialState, setInitialState ] = useState(true);
   const [onAbout, setOnAbout ] = useState(false);
-  // const [onAbout, setOnAbout ] = useState(window.innerWidth < 800 ? true : false);
   const { setCurrentMenu, setShowWaves } = useContext(GlobalContext);
   const aboutRef = useRef(null);
   const wavesRef = useRef(null);
@@ -40,7 +39,6 @@ const About = () => {
     observer.observe(aboutRef.current);
     
     return() => {
-      // if (aboutRef?.current) observer.unobserve(aboutRef);
       observer.disconnect();
     }
     
@@ -59,7 +57,6 @@ const About = () => {
     observer.observe(wavesRef.current);
     
     return() => {
-      // if (wavesRef?.current) observer.unobserve(wavesRef);
       observer.disconnect();
     }
     
@@ -84,9 +81,6 @@ const About = () => {
         </svg>
       </div>
 
-      {/* <div className={`pt-6 ${moreInfoOpen ? "" : "h-[calc((100vh-(var(--header-height)))*0.8)] max-[550px]:h-[calc((h-[100dvh]-
-        (var(--header-height)))*0.9)]"} max-[310px]:h-full`}> */}
-      {/* <div className={`pt-6 ${moreInfoOpen ? "" : "h-[calc((100vh-(var(--header-height)))*0.75)]"} max-[310px]:h-full`}> */}
       <div className={`pt-6 ${moreInfoOpen ? "" : "h-[calc((100vh-(var(--header-height)))*0.75)]"} max-[310px]:h-full`}>
         <div className={`flex h-full flex-col justify-start min-[350px]:justify-around min-[700px]:flex-row items-center ${moreInfoOpen ? "min-[700px]:items-start" : ""}`}>
           <div className="w-11/12 h-full  flex flex-col items-center justify-center min-[700px]:ml-2 max-[699px]:order-3 min-[700px]:w-3/5 max-[700px]:h-1/2 max-[700px]:justify-start min-[900px]:ml-20 min-[1000px]:ml-36">
@@ -135,8 +129,6 @@ const About = () => {
             </div>
           </div>
 
-          
-          {/* <div className={`${onAbout ? "about-picture-visible" : "about-picture-hidden"} h-auto w-auto max-[350px]:mx-4 flex justify-center order-1 min-[700px]:order-0  min-[700px]:w-2/5 min-[700px]:h-1/2 min-[1200px]:ml-3 min-[900px]:justify-start   ${moreInfoOpen ? "min-[700px]:h-screen min-[700px]:pt-20" : ""}`} id="about"> */}
           <div className={`${onAbout ? "about-picture-visible" : "about-picture-hidden"} h-auto w-auto max-[350px]:mx-4 flex justify-center order-1 min-[700px]:order-0  min-[700px]:w-2/5 min-[700px]:h-1/2 min-[1200px]:ml-3 min-[900px]:justify-start   ${moreInfoOpen ? "min-[700px]:h-screen min-[700px]:pt-20" : ""}`}>
             <div 
               className={`relative flex justify-center w-auto min-[350px]:h-52 ${moreInfoOpen ? "min-[700px]:h-1/3" : ""} min-[900px]:justify-start`}
@@ -154,12 +146,6 @@ const About = () => {
         </div>
       </div>
       
-      {/* <div 
-        className={`${onAbout ? "about-others-visible" : "about-others-hidden"} h-[(calc((h-screen-(var(--header-height)))*0.2))px] max-[550px]:h-[calc((h-screen-(var(--header-height)))*0.15)] flex justify-center items-center border border-red-600`}
-      > */}
-      {/* <div 
-        className={`${onAbout ? "about-others-visible" : "about-others-hidden"} h-[calc((100vh-(var(--header-height)))*0.2)] max-[550px]:h-[calc((h-100vh-(var(--header-height)))*0.2)] flex justify-center items-center border border-red-600`}
-      > */}
       <div 
         className={`${onAbout ? "about-others-visible" : "about-others-hidden"} h-[calc((100vh-(var(--header-height)))*0.25)] flex justify-center items-center`}
       >

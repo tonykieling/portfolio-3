@@ -31,7 +31,6 @@ export default function Blueprint(
     observer.observe(itemRef.current);
 
     return() => {
-      // if (itemRef) observer.unobserve(itemRef);
       observer.disconnect();
     }
 
