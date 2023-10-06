@@ -28,8 +28,8 @@ const Portfolio = () => {
     observer.observe(portfolioRef.current);
 
     return() => {
+      // if (portfolioRef?.current) observer.unobserve(portfolioRef);
       observer.disconnect();
-      if (portfolioRef) observer.unobserve(portfolioRef);
     }
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -42,6 +42,7 @@ const Portfolio = () => {
       <div 
         className={`${onPortfolio ? "component-visible" : "component-hidden"} flex flex-col items-center w-full`}
       >
+        {/* { window.innerHeight } */}
         <h1 className="text-4xl font-bold tracking-widest mt-7 mb-5 text-slate-900">Portfolio</h1>
         <h2 className="text-lg font-semibold tracking-wide text-center"> Some of the projects I&apos;ve been collaborating with:</h2>
         

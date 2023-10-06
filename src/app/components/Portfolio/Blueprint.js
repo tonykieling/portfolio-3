@@ -31,8 +31,8 @@ export default function Blueprint(
     observer.observe(itemRef.current);
 
     return() => {
+      // if (itemRef) observer.unobserve(itemRef);
       observer.disconnect();
-      if (itemRef) observer.unobserve(itemRef);
     }
 
   // eslint-disable-next-line react-hooks/exhaustive-deps

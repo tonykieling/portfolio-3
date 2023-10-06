@@ -12,9 +12,9 @@ html {
   --header-height: var(var(--header-fewer240));
   scroll-padding: var(--header-fewer240);
   overflow-x: hidden;
-  /* height: 100vh;
+  height: 100vh;
   height: 100dvh;
-  height: 100svh; */
+  height: 100svh;
   box-sizing: content-box;
 }
 @media only screen and (min-width: 240px) and (max-width: 333px) {

@@ -40,8 +40,8 @@ const About = () => {
     observer.observe(aboutRef.current);
     
     return() => {
+      // if (aboutRef?.current) observer.unobserve(aboutRef);
       observer.disconnect();
-      if (aboutRef) observer.unobserve(aboutRef);
     }
     
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -59,8 +59,8 @@ const About = () => {
     observer.observe(wavesRef.current);
     
     return() => {
+      // if (wavesRef?.current) observer.unobserve(wavesRef);
       observer.disconnect();
-      if (wavesRef) observer.unobserve(wavesRef);
     }
     
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -71,6 +71,7 @@ const About = () => {
     <section className="z-10 bg-gradient-to-t from-blue-100 to-blue-400 to flex flex-col" id="about" ref={aboutRef}>
 
       {/* waves */}
+      {/* https://www.shapedivider.app/ */}
       <div className="custom-shape-divider-top" ref={wavesRef}>
         <svg dataname="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
           <defs>

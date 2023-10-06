@@ -51,8 +51,8 @@ const Contact = () => {
     observer.observe(contactRef.current);
 
     return() => {
+      // if (contactRef?.current) observer.unobserve(contactRef);
       observer.disconnect();
-      if (contactRef) observer.unobserve(contactRef);
     }
     
   // eslint-disable-next-line react-hooks/exhaustive-deps
